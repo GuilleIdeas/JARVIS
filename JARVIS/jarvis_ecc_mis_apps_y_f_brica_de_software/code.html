@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#7000a8","primary":"#e3fdff","on-error":"#690005","surface-container-low":"#181c23","on-secondary-container":"#f9f7ff","primary-fixed":"#6ff6ff","primary-fixed-dim":"#00dce6","surface-container-lowest":"#0a0e15","surface-container-highest":"#31353c","primary-container":"#00f3ff","surface-tint":"#00dce6","outline-variant":"#3a494b","on-primary":"#00373a","secondary":"#b3c5ff","surface-dim":"#0f141a","surface-variant":"#31353c","inverse-on-surface":"#2c3138","secondary-fixed":"#dae1ff","on-surface":"#dfe2ec","on-tertiary-fixed":"#30004b","surface-bright":"#353941","tertiary-fixed-dim":"#e5b5ff","on-secondary-fixed":"#001849","error":"#ffb4ab","error-container":"#93000a","on-surface-variant":"#b9cacb","tertiary":"#fff6fd","on-secondary":"#002b75","outline":"#849495","tertiary-fixed":"#f4d9ff","on-secondary-fixed-variant":"#003fa4","on-tertiary":"#4e0078","on-error-container":"#ffdad6","on-primary-container":"#006b71","inverse-surface":"#dfe2ec","secondary-container":"#0266ff","on-primary-fixed-variant":"#004f53","surface":"#0f141a","background":"#0f141a","on-primary-fixed":"#002022","on-background":"#dfe2ec","secondary-fixed-dim":"#b3c5ff","on-tertiary-container":"#9500df","surface-container-high":"#262a31","surface-container":"#1c2027","tertiary-container":"#f1d1ff","inverse-primary":"#00696f"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","margin-lg":"2.5rem","margin":"1.5rem","gutter":"1rem","gutter-lg":"1.5rem","space-sm":"0.5rem","space-md":"1rem","space-xs":"0.25rem","space-xl":"2.5rem"},fontFamily:{"headline-xl-mobile":["Space Grotesk"],"body-md":["Inter"],"label-lg":["JetBrains Mono"],"label-md":["JetBrains Mono"],"headline-md":["Space Grotesk"],"body-sm":["Inter"],"headline-lg":["Space Grotesk"],"body-lg":["Inter"],"headline-xl":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"label-sm":["JetBrains Mono"]},fontSize:{"headline-xl-mobile":["32px",{lineHeight:"40px",letterSpacing:"0.06em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}],"label-lg":["13px",{lineHeight:"18px",letterSpacing:"0.12em",fontWeight:"600"}],"label-md":["11px",{lineHeight:"16px",letterSpacing:"0.14em",fontWeight:"500"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"0.04em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"0.06em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-xl":["48px",{lineHeight:"56px",letterSpacing:"0.08em",fontWeight:"700"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"0.04em",fontWeight:"600"}],"label-sm":["9px",{lineHeight:"12px",letterSpacing:"0.18em",fontWeight:"500"}]}}}}</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="JARVIS ECC Nucleo Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC5O5yrTDA2RT4YPU9s-zKyMg8zCn-WMEYHerCjV2IYwT8RhOVEQqzEH4Jc0F5eOXUgNwXLgCF33eKVrF4B2sXtW2L8O1-KaOkBwzwqq0KuTVL_GessBdSD8g9VUedItpOgfa6JI_QyedYzUOsP3PYJSIuEcMjNktVD9CNjJ-HjA99CL5Xy43Y1HxLo-HkXB1OPsKcFmLY0Nhh_LqhjAO8SXMw_-PV497PrReB0rDlW"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-lg text-label-lg text-primary uppercase">JARVIS // ECC</span><span class="font-label-sm text-label-sm px-space-xs bg-surface-container text-primary-fixed">v9.4-QUANTUM</span></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">NÚCLEO DE MANDO GLOBAL // STARK TACTICAL</span></div></div><div class="hidden xl:flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">CORE:</span><span class="font-label-sm text-label-sm text-primary uppercase">SINCRO-CUÁNTICA 99.98%</span></div><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SAT-LINK:</span><span class="font-label-sm text-label-sm text-secondary uppercase">GEO-ORBITAL ENLACE L4 [ACTIVO]</span></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">LATENCIA:</span><span class="font-label-sm text-label-sm text-primary font-bold">0.42 MS</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex flex-col text-right"><span class="font-label-sm text-label-sm text-primary uppercase">COMANDANTE EJECUTIVO</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SEC-CLEARANCE LVL-9</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low/95 backdrop-blur-2xl z-40 flex flex-col justify-between p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-md"><div class="px-space-sm pt-space-xs"><div class="font-label-sm text-label-sm text-outline uppercase">MATRIZ DE OPERACIONES</div><div class="font-label-md text-label-md text-on-surface uppercase">SISTEMA PRINCIPAL</div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="centro-de-mando" href="#"><span class="material-symbols-outlined text-[18px]">deployed_code</span>CENTRO DE MANDO</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="red-de-satelites" href="#"><span class="material-symbols-outlined text-[18px]">satellite_alt</span>RED DE SATÉLITES</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="defensa-orbital" href="#"><span class="material-symbols-outlined text-[18px]">shield</span>DEFENSA ORBITAL</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="telemetria-global" href="#"><span class="material-symbols-outlined text-[18px]">hub</span>TELEMETRÍA GLOBAL</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="protocolos-tacticos" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span>PROTOCOLOS TÁCTICOS</a></nav></div><div class="flex flex-col gap-space-xs bg-surface-container-lowest/80 p-space-sm rounded"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline uppercase">NIVEL DE AMENAZA</span><span class="font-label-sm text-label-sm text-primary uppercase">DEFCON 3</span></div><div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden"><div class="bg-primary-container h-full w-2/5"></div></div><div class="font-label-sm text-label-sm text-on-surface-variant text-right">ENCRIPTACIÓN Q-SHA512</div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full p-space-md gap-space-md">
+<!-- HUD STATUS STRIP // SUB-HEADER CONTEXT -->
+<div class="w-full bg-surface-container-low/80 backdrop-blur-xl px-space-md py-space-xs rounded flex flex-wrap items-center justify-between gap-space-sm shadow-md">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#00f3ff]"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">NÚCLEO EJECUTIVO ECC</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant">|</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">MODO OPERATIVO: <span class="text-primary font-semibold">SWARM-FABRIC // CI-CD TÁCTICO</span></span>
+</div>
+<!-- PESTAÑAS DE CONTROL SUPERIOR -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest/90 p-1 rounded">
+<button class="px-space-sm py-1 font-label-sm text-label-sm text-outline hover:text-on-surface rounded transition-colors uppercase">
+        1. VECTORES DEFENSA
+      </button>
+<button class="px-space-sm py-1 font-label-sm text-label-sm text-outline hover:text-on-surface rounded transition-colors uppercase">
+        2. ORBITAL TELEMETRÍA
+      </button>
+<button class="px-space-sm py-1 font-label-sm text-label-sm bg-primary-container text-on-primary-container font-bold rounded shadow-[0_0_12px_rgba(0,243,255,0.4)] uppercase">
+        3. MIS APPS &amp; FÁBRICA [ACTIVO]
+      </button>
+<button class="px-space-sm py-1 font-label-sm text-label-sm text-outline hover:text-on-surface rounded transition-colors uppercase">
+        4. PROTOCOLOS IA
+      </button>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase flex items-center gap-1">
+<span>SWARM REPLICAS:</span>
+<span class="text-primary font-bold">14/14 SALUDABLES</span>
+</div>
+<div class="flex items-center gap-space-xs px-2 py-0.5 rounded bg-surface-container-high">
+<span class="material-symbols-outlined text-[14px] text-primary">terminal</span>
+<span class="font-label-sm text-label-sm text-primary uppercase">v5.0.4-DEPLOYED</span>
+</div>
+</div>
+</div>
+<!-- 3-COLUMN TACTICAL HUD GRID -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md w-full">
+<!-- COLUMNA IZQUIERDA: CONSEJO ECC (3 COLS) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Panel de Autoridad Táctica -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl p-space-md rounded flex flex-col gap-space-md shadow-lg">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">CONSEJO ECC // MANDO SUPREMO</span>
+<span class="font-headline-md text-headline-md text-primary uppercase">QUÓRUM 4/4</span>
+</div>
+<span class="material-symbols-outlined text-primary-container text-[24px]">verified_user</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded overflow-hidden">
+<div class="bg-primary-container h-full w-full"></div>
+</div>
+<!-- Consejeros Tácticos -->
+<div class="flex flex-col gap-space-xs">
+<!-- Consejero 1 -->
+<div class="bg-surface-container-lowest/80 p-space-sm rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary font-label-md font-bold">
+                C1
+              </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface uppercase">DIR. FINANCIERO CUÁNTICO</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">VAL. ALGORÍTMICA // QUANT</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase bg-surface-container px-2 py-0.5 rounded font-bold">VOTO: OK</span>
+</div>
+<!-- Consejero 2 -->
+<div class="bg-surface-container-lowest/80 p-space-sm rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-secondary font-label-md font-bold">
+                C2
+              </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface uppercase">OFICIAL CIBER-SEGURIDAD</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">AUDITORÍA ESTÁTICA AST</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase bg-surface-container px-2 py-0.5 rounded font-bold">FIRMA SEC</span>
+</div>
+<!-- Consejero 3 -->
+<div class="bg-surface-container-lowest/80 p-space-sm rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-tertiary font-label-md font-bold">
+                C3
+              </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface uppercase">ORQUESTADOR SWARM</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">PODS EN REPLICACIÓN</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase bg-surface-container px-2 py-0.5 rounded font-bold">SINCRO</span>
+</div>
+<!-- Consejero 4 -->
+<div class="bg-surface-container-lowest/80 p-space-sm rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary-fixed font-label-md font-bold">
+                C4
+              </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface uppercase">OPERADOR TÁCTICO ORBITAL</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">LATENCIA TRANSIT FIX</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase bg-surface-container px-2 py-0.5 rounded font-bold">ONLINE</span>
+</div>
+</div>
+<div class="bg-surface-container-high/60 p-space-sm rounded flex flex-col gap-space-xs mt-2">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-outline uppercase">DIRECTIVA ACTIVA:</span>
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase font-bold">#DIR-9892-SWARM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Despliegue continuo autorizado para nodos de ultra-baja latencia sin intervención humana. Límite de drawdown fijado en $1.5M/hora.
+          </p>
+</div>
+</div>
+<!-- Telemetría de Recursos del Swarm -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl p-space-md rounded flex flex-col gap-space-sm shadow-md">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">BALANCE HARDWARE // CLÚSTER OSIRIS</span>
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant uppercase">ASIC QUANTUM-GATE:</span>
+<span class="text-primary font-bold">88.4%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded overflow-hidden">
+<div class="bg-secondary-container h-full w-[88.4%]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant uppercase">RAM FIX-ENGINE SHM:</span>
+<span class="text-primary font-bold">42.1 GB / 128 GB</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded overflow-hidden">
+<div class="bg-primary-container h-full w-[33%]"></div>
+</div>
+</div>
+<div class="flex justify-between items-center pt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>GAS OPTIMIZATION:</span>
+<span class="text-primary font-semibold">0.00018 GWEI</span>
+</div>
+</div>
+</div>
+<!-- COLUMNA CENTRAL: MAPA GEOESPACIAL + PESTAÑA [MIS APPS & FÁBRICA] (6 COLS) -->
+<div class="xl:col-span-6 flex flex-col gap-space-md">
+<!-- MITAD SUPERIOR: MAPA GEOESPACIAL ARGOS ATLAS & OSIRIS -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl rounded overflow-hidden flex flex-col shadow-lg">
+<div class="px-space-md py-space-xs bg-surface-container-lowest/80 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">MATRIZ GEOESPACIAL // ARGOS ATLAS &amp; OSIRIS</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">NODOS FIX: <span class="text-primary">LONDRES // TOKIO // NY</span></span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-bold">ENLACE L2</span>
+</div>
+</div>
+<!-- Render visual cartográfico táctico -->
+<div class="relative w-full h-48 bg-surface-container-lowest flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-screen" data-location="Reykjavik Atlantic Tactical Node" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBndU3zSvxNKCimgPE6GtYLr0ygderXHjwNVaYv3Y10jzFUzz24OBPsUhvvTfOeaExQjunSbyljnoLK4Z9RSJfr0X_MLP44MyHN3WWpi1l2cLk537XwWnTM8CNThfs5Ysb4fhVUx89fYXoiPib9CB9DWlNJg5wJlAKBNuHkNwe8ta5nNz-_d24AZgtEhhk46Y1iJnQ85c9ucRoexOdNsB4oq5k7AHIMT4fplmraw4')"></div>
+<!-- Retícula táctica vectorial SVG -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="tactical-grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0, 243, 255, 0.08)" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#tactical-grid)" height="100%" width="100%"></rect>
+<!-- Rutas de paquetes FIX y Swarms -->
+<path d="M 120 120 Q 280 40 440 80 T 700 130" fill="none" stroke="rgba(0, 243, 255, 0.45)" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<circle class="animate-pulse" cx="120" cy="120" fill="#00f3ff" r="4"></circle>
+<circle cx="440" cy="80" fill="#0266ff" r="5"></circle>
+<circle cx="700" cy="130" fill="#6ff6ff" r="4"></circle>
+</svg>
+<!-- Marcadores flotantes HUD -->
+<div class="absolute top-4 left-6 bg-surface-container-lowest/80 p-space-xs rounded backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">NODO LONDRES (LD4)</span>
+<div class="font-label-sm text-label-sm text-on-surface-variant">RTT: 1.12 MS // FIX 5.0 SP2</div>
+</div>
+<div class="absolute bottom-4 right-6 bg-surface-container-lowest/80 p-space-xs rounded backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">NODO NY (NY4 SEC-NET)</span>
+<div class="font-label-sm text-label-sm text-on-surface-variant">SWARM INGRESS // PORT 8088</div>
+</div>
+<div class="z-10 flex flex-col items-center justify-center p-space-sm bg-surface-container-low/80 backdrop-blur-md rounded">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-widest">TRANSMISIÓN SINCRÓNICA CONTINUA</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rendimiento: 82,490 ops/seg // Sin degradación de paquetes</span>
+</div>
+</div>
+</div>
+<!-- MITAD INFERIOR: PESTAÑA [3. MIS APPS & FÁBRICA] ACTIVA -->
+<div class="bg-surface-container-low/95 backdrop-blur-2xl rounded p-space-md flex flex-col gap-space-md shadow-[0_0_24px_rgba(0,243,255,0.12)]">
+<!-- CABECERA DEL PANEL CONMUTADOR -->
+<div class="flex items-center justify-between bg-surface-container-lowest/60 p-space-sm rounded">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[20px]">hub</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">SECTOR DE DESPLIEGUE</span>
+<span class="font-label-lg text-label-lg text-primary uppercase">FÁBRICA SWARM Y ECOSISTEMA DE APLICACIONES</span>
+</div>
+</div>
+<!-- Selector rápido de vista de fábrica -->
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">ESTADO GLOBAL:</span>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold uppercase shadow-[0_0_8px_#00f3ff]">100% OPERATIVO</span>
+</div>
+</div>
+<!-- 1. TARJETA DESTACADA HERO: QUANT-TERMINAL v5.0 -->
+<div class="relative bg-surface-container-lowest/90 rounded p-space-md overflow-hidden shadow-lg flex flex-col gap-space-md">
+<!-- Fondo visual abstracto táctico -->
+<div class="absolute -right-8 -top-8 w-44 h-44 rounded-full bg-secondary-container/10 filter blur-3xl pointer-events-none"></div>
+<div class="flex flex-wrap items-start justify-between gap-space-sm z-10">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">PROPIETARY HIGH-FREQUENCY CORE</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary uppercase tracking-wide">
+                QUANT-TERMINAL v5.0
+              </h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">
+                ENLACE FIX 5.0 SP2 // ARBITRAJE MULTI-ACTIVO ORBITAL // CO-LOCATED NY4 &amp; LD4
+              </span>
+</div>
+<!-- Botón prominente cian/magenta brillante -->
+<button class="relative group px-space-md py-space-sm bg-primary-container text-on-primary-container font-label-lg text-label-lg font-bold rounded uppercase tracking-wider shadow-[0_0_20px_rgba(0,243,255,0.6)] hover:bg-tertiary-container hover:text-on-tertiary-container hover:shadow-[0_0_25px_rgba(241,209,255,0.8)] transition-all flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>ABRIR TERMINAL</span>
+</button>
+</div>
+<!-- Métricas de Telemetría Clave -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm z-10">
+<div class="bg-surface-container-high/60 p-space-sm rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">LATENCIA TICK-TO-TRADE</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">4.02 <span class="text-xs font-normal">MS</span></span>
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase font-semibold">ULTRABAJA // NY4 LINK</span>
+</div>
+<div class="bg-surface-container-high/60 p-space-sm rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">CONEXIÓN FIX</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold">v5.0 SP2</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">SESIÓN DUPLEX FIXP</span>
+</div>
+<div class="bg-surface-container-high/60 p-space-sm rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">P&amp;L SESIÓN (24H)</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">+$482,910</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">ALPHA +3.41% SIGMA</span>
+</div>
+<div class="bg-surface-container-high/60 p-space-sm rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">EJECUCIONES / SEG</span>
+<span class="font-headline-md text-headline-md text-primary-fixed font-bold">14,280</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">BURST PEAK: 32K</span>
+</div>
+</div>
+<!-- Status bar con progreso de sincro -->
+<div class="flex items-center justify-between bg-surface-container-high/40 px-space-sm py-1 rounded text-on-surface-variant z-10">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">sync</span>
+<span class="text-primary font-bold uppercase">STATUS: SINCRONIZADA Y EJECUTANDO</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase">BUFFER OVERFLOW: 0.00%</span>
+</div>
+</div>
+<!-- 2. ESTUDIO DE CREACIÓN AUTÓNOMA DE SOFTWARE (Fábrica Swarm) -->
+<div class="bg-surface-container-lowest/80 rounded p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">SWARM CODE FACTORY</span>
+<span class="font-headline-md text-headline-md text-on-surface uppercase">GENERADOR DE MICRO-SERVICIOS AUTÓNOMO</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">KUBERNETES SWARM ACTIVO</span>
+</div>
+</div>
+<!-- Visualización de Agentes Sintéticos -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Agente 1: Arquitecto -->
+<div class="bg-surface-container-high/50 p-space-sm rounded flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">AGENTE 01 // ARQUITECTO</span>
+<span class="material-symbols-outlined text-primary text-[16px]">account_tree</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">SYNTH-ARCHITECT v4</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Generando esquemas gRPC y topología de colas Kafka de baja dispersión.</p>
+<div class="flex justify-between items-center pt-1 font-label-sm text-label-sm text-outline">
+<span>ESTADO: SINTETIZANDO</span>
+<span class="text-primary font-bold">94%</span>
+</div>
+</div>
+<!-- Agente 2: Auditor de Seguridad -->
+<div class="bg-surface-container-high/50 p-space-sm rounded flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">AGENTE 02 // AUDITOR</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">security</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">SEC-SENTINEL SAST</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Escaneo heurístico de memory safety y validación de tipos Rust/C++20.</p>
+<div class="flex justify-between items-center pt-1 font-label-sm text-label-sm text-outline">
+<span>VULNERABILIDADES: 0</span>
+<span class="text-secondary font-bold">LIMPIO</span>
+</div>
+</div>
+<!-- Agente 3: Tester Automatizado -->
+<div class="bg-surface-container-high/50 p-space-sm rounded flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase font-bold">AGENTE 03 // TESTER</span>
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">bug_report</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">CHAOS-RUNNER v2</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fuzzing de 2.4M paquetes con inyección de jitter y pérdida de sockets.</p>
+<div class="flex justify-between items-center pt-1 font-label-sm text-label-sm text-outline">
+<span>COVERAGE: 99.8%</span>
+<span class="text-primary font-bold">PASA</span>
+</div>
+</div>
+</div>
+<!-- Pipeline de Despliegue CI/CD Docker + Kube Swarm -->
+<div class="bg-surface-container-high/40 p-space-sm rounded flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline uppercase">PIPELINE CI/CD: REPOSITORIO PRIVADO -&gt; DOCKER REGISTRY -&gt; K8S CLUSTER</span>
+<span class="text-primary font-semibold uppercase">BUILD #4892 COMPLETO</span>
+</div>
+<!-- Representación visual de nodos del pipeline -->
+<div class="flex items-center justify-between gap-space-xs py-1">
+<div class="flex-1 bg-surface-container-highest h-2 rounded overflow-hidden">
+<div class="bg-primary-container h-full w-full"></div>
+</div>
+<span class="material-symbols-outlined text-primary text-[14px]">arrow_forward</span>
+<div class="flex-1 bg-surface-container-highest h-2 rounded overflow-hidden">
+<div class="bg-primary-container h-full w-full"></div>
+</div>
+<span class="material-symbols-outlined text-primary text-[14px]">arrow_forward</span>
+<div class="flex-1 bg-surface-container-highest h-2 rounded overflow-hidden">
+<div class="bg-primary-container h-full w-4/5 animate-pulse"></div>
+</div>
+<span class="material-symbols-outlined text-outline text-[14px]">arrow_forward</span>
+<div class="flex-1 bg-surface-container-highest h-2 rounded overflow-hidden">
+<div class="bg-surface-container h-full w-0"></div>
+</div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>1. COMPILAR RUST (OK)</span>
+<span>2. CONTENEDOR DOCKER (OK)</span>
+<span class="text-primary font-bold">3. ENJAMBRE PODS (DESPLEGANDO)</span>
+<span class="text-outline">4. RUTA DNS MESH</span>
+</div>
+</div>
+</div>
+<!-- 3. LISTA DE APPS PROPIAS CONECTADAS -->
+<div class="bg-surface-container-lowest/80 rounded p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">APLICACIONES ACTIVAS EN INFRAESTRUCTURA PROPIA</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 INSTANCIAS SINCRONIZADAS</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- App 1: Neuro-Scraper -->
+<div class="bg-surface-container-high/40 p-space-sm rounded flex items-center justify-between hover:bg-surface-container-high/70 transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">travel_explore</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold">NEURO-SCRAPER OSINT BOT</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">Extracción semántica en tiempo real // 45 fuentes oscuras</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">CPU: 18%</span>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary-fixed font-label-sm text-label-sm font-bold uppercase">
+                  [SYS::EN EJECUCIÓN]
+                </span>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- App 2: Arbitrage Sentinel L2 -->
+<div class="bg-surface-container-high/40 p-space-sm rounded flex items-center justify-between hover:bg-surface-container-high/70 transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">ssid_chart</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold">ARBITRAGE SENTINEL L2</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">Detección de slippage interbancario // L2 Order Books</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">LATENCIA: 1.8MS</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-bold uppercase">
+                  [SYS::EN LÍNEA]
+                </span>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- App 3: E-Com Predictive Engine -->
+<div class="bg-surface-container-high/40 p-space-sm rounded flex items-center justify-between hover:bg-surface-container-high/70 transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold">E-COM PREDICTIVE PRICING ENGINE</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">Optimización estocástica de margen minorista</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-outline uppercase">POOLED CLUSTER</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-outline font-label-sm text-label-sm font-bold uppercase">
+                  [SYS::STANDBY]
+                </span>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. BOTÓN TÁCTICO + SELECTOR DE TEMPLATE -->
+<div class="bg-surface-container-lowest/90 p-space-md rounded flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex flex-col w-full md:w-auto">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">ARQUITECTURA MODULAR</span>
+<span class="font-label-lg text-label-lg text-primary uppercase">NUEVO DESPLIEGUE RÁPIDO</span>
+</div>
+<!-- Selector de templates tácticos -->
+<div class="flex flex-wrap items-center gap-space-xs w-full md:w-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mr-2">TEMPLATE:</span>
+<button class="px-2 py-1 bg-surface-container text-primary font-label-sm text-label-sm rounded hover:bg-surface-container-high uppercase transition-colors">
+              TRADING BOT
+            </button>
+<button class="px-2 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded hover:bg-surface-container-high uppercase transition-colors">
+              SCRAPER
+            </button>
+<button class="px-2 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded hover:bg-surface-container-high uppercase transition-colors">
+              MICRO-SAAS
+            </button>
+<button class="px-2 py-1 bg-surface-container text-tertiary-fixed-dim font-label-sm text-label-sm rounded hover:bg-surface-container-high uppercase transition-colors">
+              AGENTE IA
+            </button>
+</div>
+<button class="w-full md:w-auto px-space-md py-space-sm bg-surface-container-highest text-primary-fixed hover:bg-primary-container hover:text-on-primary-container font-label-lg text-label-lg font-bold rounded uppercase tracking-wider transition-all flex items-center justify-center gap-space-xs shadow-md">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ CREAR / CONECTAR NUEVA APP</span>
+</button>
+</div>
+</div>
+</div>
+<!-- COLUMNA DERECHA: CONSOLA JARVIS // VINCULACIÓN ACTIVA (3 COLS) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Panel Consola JARVIS -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl p-space-md rounded flex flex-col gap-space-md shadow-lg h-full">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">CONSOLA JARVIS // NÚCLEO IA</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">TELEMETRÍA EN DIRECTO</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+</div>
+<!-- Terminal de Logs con tipografía monospace estricta -->
+<div class="bg-surface-container-lowest p-space-sm rounded font-label-sm text-label-sm flex flex-col gap-space-xs text-on-surface-variant h-80 overflow-y-auto">
+<div class="text-outline">[14:32:01.002] ECC-KERNEL :: INICIALIZANDO MONITOR DE APPS</div>
+<div class="text-primary">[14:32:01.412] SWARM-FABRIC :: COMMIT 0x9f88c DETECTADO EN RAMA 'MAIN'</div>
+<div class="text-secondary">[14:32:02.100] CI/CD PIPELINE :: 3 AGENTES DISPARADOS (ARCHITECT, AUDITOR, TESTER)</div>
+<div class="text-on-surface">[14:32:04.882] AUDITOR :: SAST ZERO-CVE VALIDADO. MEMORY-SAFE COMPLIANT.</div>
+<div class="text-primary-fixed">[14:32:07.129] REGISTRY :: RECEPTOR DOCKER PUSH 'quant-engine:5.0.4' OK</div>
+<div class="text-primary font-bold">[14:32:09.910] JARVIS :: ENLACE FIX 5.0 RE-SINCRONIZADO CON LD4 &amp; NY4</div>
+<div class="text-tertiary-fixed-dim">[14:32:10.005] TERMINAL TRADING :: PROTOCOLO RTT MEDIDO A 4.02 MS</div>
+<div class="text-primary font-bold">[14:32:11.450] JARVIS :: SEÑOR, QUANT-TERMINAL v5.0 OPERA A MÁXIMA CAPACIDAD CON UN ALPHA NETO DE +$482K.</div>
+<div class="text-outline animate-pulse">[14:32:12.001] ESPERANDO NUEVO COMMIT O PETICIÓN DE DESPLIEGUE... ▋</div>
+</div>
+<!-- Panel de Notificación Táctica JARVIS -->
+<div class="bg-surface-container-high/60 p-space-sm rounded flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">smart_toy</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">INFORME SINTÉTICO JARVIS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            "El último commit (#0x9F88C) integró micro-optimizaciones de memoria shared-memory. El pipeline CI/CD finalizó en 7.8 segundos. Todos los microservicios y bots en enjambre responden en los parámetros nominales."
+          </p>
+</div>
+<!-- Enlace rápido con el Terminal de Trading -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-outline uppercase">PUERTO COMUNICACIÓN FIX:</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">PORT 9821</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-outline uppercase">DESVIACIÓN DE EJECUCIÓN:</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">0.0002 %</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-outline uppercase">CANAL ENCRIPTADO:</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">AES-256-GCM + Q-KEY</span>
+</div>
+</div>
+<button class="w-full py-space-xs bg-surface-container text-outline hover:text-primary hover:bg-surface-container-high rounded font-label-sm text-label-sm uppercase transition-colors flex items-center justify-center gap-space-xs mt-auto">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>DESCARGAR LOG COMPLETO DE FÁBRICA</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,821 @@
+<!DOCTYPE html><html class="dark" lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#7000a8","primary":"#e3fdff","on-error":"#690005","surface-container-low":"#181c23","on-secondary-container":"#f9f7ff","primary-fixed":"#6ff6ff","primary-fixed-dim":"#00dce6","surface-container-lowest":"#0a0e15","surface-container-highest":"#31353c","primary-container":"#00f3ff","surface-tint":"#00dce6","outline-variant":"#3a494b","on-primary":"#00373a","secondary":"#b3c5ff","surface-dim":"#0f141a","surface-variant":"#31353c","inverse-on-surface":"#2c3138","secondary-fixed":"#dae1ff","on-surface":"#dfe2ec","on-tertiary-fixed":"#30004b","surface-bright":"#353941","tertiary-fixed-dim":"#e5b5ff","on-secondary-fixed":"#001849","error":"#ffb4ab","error-container":"#93000a","on-surface-variant":"#b9cacb","tertiary":"#fff6fd","on-secondary":"#002b75","outline":"#849495","tertiary-fixed":"#f4d9ff","on-secondary-fixed-variant":"#003fa4","on-tertiary":"#4e0078","on-error-container":"#ffdad6","on-primary-container":"#006b71","inverse-surface":"#dfe2ec","secondary-container":"#0266ff","on-primary-fixed-variant":"#004f53","surface":"#0f141a","background":"#0f141a","on-primary-fixed":"#002022","on-background":"#dfe2ec","secondary-fixed-dim":"#b3c5ff","on-tertiary-container":"#9500df","surface-container-high":"#262a31","surface-container":"#1c2027","tertiary-container":"#f1d1ff","inverse-primary":"#00696f"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","margin-lg":"2.5rem","margin":"1.5rem","gutter":"1rem","gutter-lg":"1.5rem","space-sm":"0.5rem","space-md":"1rem","space-xs":"0.25rem","space-xl":"2.5rem"},fontFamily:{"headline-xl-mobile":["Space Grotesk"],"body-md":["Inter"],"label-lg":["JetBrains Mono"],"label-md":["JetBrains Mono"],"headline-md":["Space Grotesk"],"body-sm":["Inter"],"headline-lg":["Space Grotesk"],"body-lg":["Inter"],"headline-xl":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"label-sm":["JetBrains Mono"]},fontSize:{"headline-xl-mobile":["32px",{lineHeight:"40px",letterSpacing:"0.06em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}],"label-lg":["13px",{lineHeight:"18px",letterSpacing:"0.12em",fontWeight:"600"}],"label-md":["11px",{lineHeight:"16px",letterSpacing:"0.14em",fontWeight:"500"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"0.04em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"0.06em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-xl":["48px",{lineHeight:"56px",letterSpacing:"0.08em",fontWeight:"700"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"0.04em",fontWeight:"600"}],"label-sm":["9px",{lineHeight:"12px",letterSpacing:"0.18em",fontWeight:"500"}]}}}}</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="JARVIS ECC Nucleo Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC5O5yrTDA2RT4YPU9s-zKyMg8zCn-WMEYHerCjV2IYwT8RhOVEQqzEH4Jc0F5eOXUgNwXLgCF33eKVrF4B2sXtW2L8O1-KaOkBwzwqq0KuTVL_GessBdSD8g9VUedItpOgfa6JI_QyedYzUOsP3PYJSIuEcMjNktVD9CNjJ-HjA99CL5Xy43Y1HxLo-HkXB1OPsKcFmLY0Nhh_LqhjAO8SXMw_-PV497PrReB0rDlW"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-lg text-label-lg text-primary uppercase">JARVIS // ECC</span><span class="font-label-sm text-label-sm px-space-xs bg-surface-container text-primary-fixed">v9.4-QUANTUM</span></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">NÚCLEO DE MANDO GLOBAL // STARK TACTICAL</span></div></div><div class="hidden xl:flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">CORE:</span><span class="font-label-sm text-label-sm text-primary uppercase">SINCRO-CUÁNTICA 99.98%</span></div><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SAT-LINK:</span><span class="font-label-sm text-label-sm text-secondary uppercase">GEO-ORBITAL ENLACE L4 [ACTIVO]</span></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">LATENCIA:</span><span class="font-label-sm text-label-sm text-primary font-bold">0.42 MS</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex flex-col text-right"><span class="font-label-sm text-label-sm text-primary uppercase">COMANDANTE EJECUTIVO</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SEC-CLEARANCE LVL-9</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low/95 backdrop-blur-2xl z-40 flex flex-col justify-between p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-md"><div class="px-space-sm pt-space-xs"><div class="font-label-sm text-label-sm text-outline uppercase">MATRIZ DE OPERACIONES</div><div class="font-label-md text-label-md text-on-surface uppercase">SISTEMA PRINCIPAL</div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs transition-colors uppercase bg-primary-container text-on-primary-container font-bold rounded" data-path="centro-de-mando" href="#"><span class="material-symbols-outlined text-[18px]">deployed_code</span>CENTRO DE MANDO</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="red-de-satelites" href="#"><span class="material-symbols-outlined text-[18px]">satellite_alt</span>RED DE SATÉLITES</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="defensa-orbital" href="#"><span class="material-symbols-outlined text-[18px]">shield</span>DEFENSA ORBITAL</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="telemetria-global" href="#"><span class="material-symbols-outlined text-[18px]">hub</span>TELEMETRÍA GLOBAL</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="protocolos-tacticos" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span>PROTOCOLOS TÁCTICOS</a></nav></div><div class="flex flex-col gap-space-xs bg-surface-container-lowest/80 p-space-sm rounded"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline uppercase">NIVEL DE AMENAZA</span><span class="font-label-sm text-label-sm text-primary uppercase">DEFCON 3</span></div><div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden"><div class="bg-primary-container h-full w-2/5"></div></div><div class="font-label-sm text-label-sm text-on-surface-variant text-right">ENCRIPTACIÓN Q-SHA512</div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full text-on-surface select-none">
+<!-- 1. BARRA SUPERIOR DE TELEMETRÍA Y PUENTES -->
+<section class="w-full bg-surface-container-lowest/95 backdrop-blur-md px-gutter-lg py-space-xs flex flex-col gap-space-xs shadow-md">
+<!-- Fila 1: Ticker Financiero en Vivo Continuo -->
+<div class="w-full flex items-center gap-space-md overflow-hidden bg-surface-container-low/80 px-space-md py-1 rounded">
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#00F3FF]"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">FEED FINANCIERO // L2</span>
+</div>
+<div class="flex items-center gap-space-lg overflow-x-auto whitespace-nowrap scrollbar-none py-0.5">
+<div class="flex items-center gap-1.5 font-label-md text-label-md">
+<span class="text-outline-variant font-semibold">S&amp;P 500:</span>
+<span class="text-primary font-bold">5,912.40</span>
+<span class="text-primary-fixed flex items-center font-bold">▲ +0.84%</span>
+</div>
+<span class="text-outline-variant/40">|</span>
+<div class="flex items-center gap-1.5 font-label-md text-label-md">
+<span class="text-outline-variant font-semibold">BTC/USD:</span>
+<span class="text-primary font-bold">$94,820</span>
+<span class="text-primary-fixed flex items-center font-bold">▲ +3.2%</span>
+</div>
+<span class="text-outline-variant/40">|</span>
+<div class="flex items-center gap-1.5 font-label-md text-label-md">
+<span class="text-outline-variant font-semibold">ETH/USD:</span>
+<span class="text-primary font-bold">$3,450</span>
+<span class="text-primary-fixed flex items-center font-bold">▲ +2.1%</span>
+</div>
+<span class="text-outline-variant/40">|</span>
+<div class="flex items-center gap-1.5 font-label-md text-label-md">
+<span class="text-outline-variant font-semibold">EUR/USD:</span>
+<span class="text-on-surface font-bold">1.0542</span>
+<span class="text-error flex items-center font-bold">▼ -0.18%</span>
+</div>
+<span class="text-outline-variant/40">|</span>
+<div class="flex items-center gap-1.5 font-label-md text-label-md">
+<span class="text-outline-variant font-semibold">BRENT CRUDE:</span>
+<span class="text-on-surface font-bold">$74.20</span>
+<span class="text-error flex items-center font-bold">▼ -0.65%</span>
+</div>
+<span class="text-outline-variant/40">|</span>
+<div class="flex items-center gap-1.5 font-label-md text-label-md">
+<span class="text-outline-variant font-semibold">ORO SPOT:</span>
+<span class="text-primary font-bold">$2,684.50</span>
+<span class="text-primary-fixed flex items-center font-bold">▲ +0.42%</span>
+</div>
+<span class="text-outline-variant/40">|</span>
+<div class="flex items-center gap-1.5 font-label-md text-label-md">
+<span class="text-outline-variant font-semibold">NASDAQ:</span>
+<span class="text-primary font-bold">19,045.20</span>
+<span class="text-primary-fixed flex items-center font-bold">▲ +1.12%</span>
+</div>
+<span class="text-outline-variant/40">|</span>
+<div class="flex items-center gap-1.5 font-label-md text-label-md">
+<span class="text-outline-variant font-semibold">SOL/USD:</span>
+<span class="text-primary font-bold">$214.80</span>
+<span class="text-primary-fixed flex items-center font-bold">▲ +5.4%</span>
+</div>
+<span class="text-outline-variant/40">|</span><div class="flex items-center gap-1.5 font-label-md text-label-md bg-error-container/30 px-space-xs py-0.5 rounded"><span class="material-symbols-outlined text-[14px] text-error">gavel</span><span class="text-error font-semibold">WAR-SANCTIONS:</span><span class="text-error font-bold">12,840 ACTIVAS</span><span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span></div><span class="text-outline-variant/40">|</span><div class="flex items-center gap-1.5 font-label-md text-label-md bg-primary-container/10 px-space-xs py-0.5 rounded"><span class="material-symbols-outlined text-[14px] text-primary-container">warning</span><span class="text-primary font-semibold">ALERTA GLOBAL:</span><span class="text-primary font-bold">DEFCON 3 [ESTABLE]</span></div></div>
+</div>
+<!-- Fila 2: Relojes Multi-Zona + Motores IA + Puentes -->
+<div class="w-full flex flex-wrap items-center justify-between gap-space-sm text-label-sm font-label-sm">
+<!-- Relojes Globales -->
+<div class="flex items-center gap-space-md bg-surface-container-high/60 px-space-sm py-1 rounded">
+<div class="flex items-center gap-1">
+<span class="text-outline">ZULU/UTC:</span>
+<span class="text-primary font-bold" id="clock-utc">10:34:11Z</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-outline">MADRID:</span>
+<span class="text-on-surface font-bold" id="clock-madrid">11:34:11 CET</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-outline">NUEVA YORK:</span>
+<span class="text-on-surface font-bold" id="clock-ny">05:34:11 EST</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-outline">TOKIO:</span>
+<span class="text-on-surface font-bold" id="clock-tokyo">19:34:11 JST</span>
+</div>
+</div>
+<!-- Motores IA y Puentes Seguros -->
+<div class="flex flex-wrap items-center gap-space-xs"><!-- Motor 1 --><div class="flex items-center gap-1 bg-surface-container px-space-xs py-1 rounded shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_6px_#00F3FF] animate-pulse"></span><span class="text-on-surface font-semibold">Nemotron 3:</span><span class="text-primary font-bold">ACTIVO</span><span class="text-outline text-[8px]">[118 t/s]</span></div><!-- Motor 2 --><div class="flex items-center gap-1 bg-surface-container px-space-xs py-1 rounded shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim animate-pulse"></span><span class="text-on-surface font-semibold">NVIDIA:</span><span class="text-primary-fixed-dim font-bold">EN LÍNEA</span><span class="text-outline text-[8px]">[TRT-LLM]</span></div><!-- WhatsApp Neón Verde Pulsante --><div class="flex items-center gap-1.5 bg-surface-container-high px-space-xs py-1 rounded border border-outline-variant/30 shadow-[0_0_8px_rgba(0,255,163,0.3)]"><span class="w-2 h-2 rounded-full bg-[#00FFA3] animate-ping"></span><span class="material-symbols-outlined text-[13px] text-[#00FFA3]">chat</span><span class="text-outline">WhatsApp:</span><span class="text-[#00FFA3] font-bold tracking-wide">CONECTADO</span><span class="text-outline text-[8px]">[24ms]</span></div><!-- Signal Cian Neón Escudo Q-Resist --><div class="flex items-center gap-1.5 bg-surface-container-high px-space-xs py-1 rounded border border-primary-container/40 shadow-[0_0_10px_#00F3FF]"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="material-symbols-outlined text-[13px] text-primary-container">shield</span><span class="text-outline">Signal:</span><span class="text-primary-container font-bold tracking-wide">CIFRADO Q-RESIST</span></div><!-- Trading App Azul Eléctrico --><div class="flex items-center gap-1.5 bg-surface-container-high px-space-xs py-1 rounded border border-secondary-container/40 shadow-[0_0_8px_#0266FF]"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="material-symbols-outlined text-[13px] text-secondary">query_stats</span><span class="text-outline">App Trading:</span><span class="text-secondary font-bold tracking-wide">SINCRONIZADA</span><span class="text-outline text-[8px]">[FIX 5.0 // 4ms]</span></div></div>
+</div>
+</section>
+<!-- 2. MATRIZ TÁCTICA PRINCIPAL EN 3 COLUMNAS -->
+<div class="w-full px-gutter-lg py-space-sm grid grid-cols-1 lg:grid-cols-12 gap-space-md min-h-[calc(100vh-8.5rem)]">
+<!-- ========================================== -->
+<!-- COLUMNA A: CONSEJO EJECUTIVO ECC (25% / 3 cols) -->
+<!-- ========================================== -->
+<aside class="lg:col-span-3 flex flex-col gap-space-sm bg-surface-container-low/70 backdrop-blur-xl p-space-sm rounded-lg shadow-xl relative overflow-hidden">
+<!-- Glow superior sutil -->
+<div class="absolute -top-12 -left-12 w-40 h-40 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Cabecera de la sección -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded bg-primary-container shadow-[0_0_8px_#00F3FF]"></span>
+<span class="font-headline-md text-headline-md text-primary font-bold uppercase tracking-wider">CONSEJO ECC</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">8/8 DIRECTORES ACTIVOS EN NÚCLEO</span>
+</div>
+<button class="bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary text-label-sm font-label-sm px-space-xs py-1 rounded transition-all flex items-center gap-1 shadow-sm uppercase font-bold">
+<span class="material-symbols-outlined text-[14px]">person_add</span>
+<span>+ Especialista</span>
+</button>
+</div>
+<!-- Lista jerárquica desplazable -->
+<div class="flex flex-col gap-space-xs overflow-y-auto max-h-[760px] pr-1 scrollbar-none">
+<!-- Director 1 -->
+<div class="bg-surface-container/90 hover:bg-surface-container-high/90 p-space-xs rounded transition-all group cursor-pointer shadow-sm">
+<div class="flex items-start justify-between gap-1 mb-1">
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary leading-tight">Ingeniería &amp; Apps</span>
+<span class="font-label-sm text-[8px] text-primary flex items-center gap-1">
+<span class="w-1 h-1 rounded-full bg-primary-container animate-ping"></span> Despliegue Autónomo
+                </span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold bg-surface-container-highest px-1 rounded">87%</span>
+</div>
+<!-- Barra Carga -->
+<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden my-1">
+<div class="bg-primary-container h-full w-[87%] shadow-[0_0_8px_#00F3FF]"></div>
+</div>
+<div class="flex items-center justify-between text-[8px] font-label-sm text-outline-variant">
+<span>CI/CD • 14 Services • Swarm</span>
+<span class="text-secondary font-medium">Fullstack / Cloud AI</span>
+</div>
+</div>
+<!-- Director 2 -->
+<div class="bg-surface-container/90 hover:bg-surface-container-high/90 p-space-xs rounded transition-all group cursor-pointer shadow-sm">
+<div class="flex items-start justify-between gap-1 mb-1">
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary leading-tight">Finanzas &amp; Auditor</span>
+<span class="font-label-sm text-[8px] text-primary-fixed-dim">Liquidación Neta Positiva</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold bg-surface-container-highest px-1 rounded">64%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden my-1">
+<div class="bg-primary-fixed-dim h-full w-[64%]"></div>
+</div>
+<div class="flex items-center justify-between text-[8px] font-label-sm text-outline-variant">
+<span>IFRS • Liquidez • Hedge</span>
+<span class="text-secondary font-medium">Tesorería / M&amp;A</span>
+</div>
+</div>
+<!-- Director 3 -->
+<div class="bg-surface-container/90 hover:bg-surface-container-high/90 p-space-xs rounded transition-all group cursor-pointer shadow-sm">
+<div class="flex items-start justify-between gap-1 mb-1">
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">candlestick_chart</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary leading-tight">Trading Cuantitativo</span>
+<span class="font-label-sm text-[8px] text-primary-container font-bold">Ejecución Algorítmica</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary-container font-bold bg-surface-container-highest px-1 rounded">92%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden my-1">
+<div class="bg-primary-container h-full w-[92%] shadow-[0_0_10px_#00F3FF]"></div>
+</div>
+<div class="flex items-center justify-between text-[8px] font-label-sm text-outline-variant">
+<span>Arbitraje Stat • L2 Order Book</span>
+<span class="text-secondary font-medium">Volatilidad / Alpha</span>
+</div>
+</div>
+<!-- Director 4 -->
+<div class="bg-surface-container/90 hover:bg-surface-container-high/90 p-space-xs rounded transition-all group cursor-pointer shadow-sm">
+<div class="flex items-start justify-between gap-1 mb-1">
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">public</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary leading-tight">Geopolítica &amp; Cultura</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant">Monitor Alerta Global</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold bg-surface-container-highest px-1 rounded">45%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden my-1">
+<div class="bg-secondary-container h-full w-[45%]"></div>
+</div>
+<div class="flex items-center justify-between text-[8px] font-label-sm text-outline-variant">
+<span>Eurasia • Riesgo Regulatorio</span>
+<span class="text-secondary font-medium">Diplomacia / Sentimiento</span>
+</div>
+</div>
+<!-- Director 5 -->
+<div class="bg-surface-container/90 hover:bg-surface-container-high/90 p-space-xs rounded transition-all group cursor-pointer shadow-sm">
+<div class="flex items-start justify-between gap-1 mb-1">
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">science</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary leading-tight">Consejo Científico</span>
+<span class="font-label-sm text-[8px] text-secondary">Síntesis Cuántica</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold bg-surface-container-highest px-1 rounded">58%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden my-1">
+<div class="bg-secondary h-full w-[58%]"></div>
+</div>
+<div class="flex items-center justify-between text-[8px] font-label-sm text-outline-variant">
+<span>Sistemas Complejos • Bayes</span>
+<span class="text-secondary font-medium">Monte Carlo / Juegos</span>
+</div>
+</div>
+<!-- Director 6 -->
+<div class="bg-surface-container/90 hover:bg-surface-container-high/90 p-space-xs rounded transition-all group cursor-pointer shadow-sm">
+<div class="flex items-start justify-between gap-1 mb-1">
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">radar</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary leading-tight">Inteligencia &amp; OSINT</span>
+<span class="font-label-sm text-[8px] text-primary">Escaneo Profundo 24/7</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold bg-surface-container-highest px-1 rounded">78%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden my-1">
+<div class="bg-primary h-full w-[78%]"></div>
+</div>
+<div class="flex items-center justify-between text-[8px] font-label-sm text-outline-variant">
+<span>Correlación Multi-Vector</span>
+<span class="text-secondary font-medium">Deep Web / Recon</span>
+</div>
+</div>
+<!-- Director 7 -->
+<div class="bg-surface-container/90 hover:bg-surface-container-high/90 p-space-xs rounded transition-all group cursor-pointer shadow-sm">
+<div class="flex items-start justify-between gap-1 mb-1">
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded bg-surface-container-highest flex items-center justify-center text-on-tertiary-container group-hover:bg-on-tertiary-container group-hover:text-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-[16px]">security</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary leading-tight">Ciberseguridad &amp; OpSec</span>
+<span class="font-label-sm text-[8px] text-on-tertiary-container font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span> DEFCON 2 // ALERTA
+                </span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold bg-surface-container-highest px-1 rounded">95%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden my-1">
+<div class="bg-on-tertiary-container h-full w-[95%] shadow-[0_0_8px_#B026FF]"></div>
+</div>
+<div class="flex items-center justify-between text-[8px] font-label-sm text-outline-variant">
+<span>Zero-Day Intrusion • Red Team</span>
+<span class="text-secondary font-medium">Post-Quantum / Air-Gap</span>
+</div>
+</div>
+<!-- Director 8 -->
+<div class="bg-surface-container/90 hover:bg-surface-container-high/90 p-space-xs rounded transition-all group cursor-pointer shadow-sm">
+<div class="flex items-start justify-between gap-1 mb-1">
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary leading-tight">E-Commerce &amp; Algoritmos</span>
+<span class="font-label-sm text-[8px] text-primary-fixed">Campañas Activas</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed font-bold bg-surface-container-highest px-1 rounded">61%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden my-1">
+<div class="bg-primary-fixed h-full w-[61%]"></div>
+</div>
+<div class="flex items-center justify-between text-[8px] font-label-sm text-outline-variant">
+<span>LTV/CAC • Viral Engine RRSS</span>
+<span class="text-secondary font-medium">Neuro-Marketing / Growth</span>
+</div>
+</div>
+</div>
+<!-- Pie de Columna con status del bus -->
+<div class="mt-auto pt-space-xs bg-surface-container-lowest/80 p-space-xs rounded flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-outline uppercase">BUS SINÁPTICO ECC:</span>
+<span class="text-primary font-bold">100% OPERACIONAL</span>
+</div>
+</aside>
+<!-- ========================================== -->
+<!-- COLUMNA B: VISOR DE INTELIGENCIA Y OPERACIONES EN VIVO (47% / 6 cols) -->
+<!-- ========================================== -->
+<main class="lg:col-span-6 flex flex-col gap-space-sm">
+<!-- MITAD SUPERIOR: MAPA GEOESPACIAL 3D // ARGOS ATLAS & OSIRIS -->
+<div class="relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-2xl p-space-sm flex flex-col justify-between min-h-[360px]">
+<!-- Fondo Visual Holográfico con Rejilla Radar y Canvas Estilizado -->
+<div class="absolute inset-0 pointer-events-none opacity-30 bg-[radial-gradient(circle_at_center,_rgba(0,243,255,0.15)_0,_rgba(2,102,255,0.05)_45%,_transparent_75%)]"></div>
+<div class="absolute inset-0 pointer-events-none opacity-20 bg-[linear-gradient(to_right,rgba(0,243,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,243,255,0.1)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+<!-- SVG Táctico de Órbitas, Continentes abstractos y Escáner Radar -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+<svg class="w-full h-full text-primary-container/20 max-w-[650px] max-h-[340px]" fill="none" viewBox="0 0 800 400">
+<!-- Círculos de Retícula Radar Central -->
+<circle class="text-outline-variant/40" cx="400" cy="200" r="180" stroke="currentColor" stroke-dasharray="4 6" stroke-width="1"></circle>
+<circle class="text-primary-container/30" cx="400" cy="200" r="120" stroke="currentColor" stroke-width="1"></circle>
+<circle class="text-primary-container/40" cx="400" cy="200" r="60" stroke="currentColor" stroke-dasharray="2 4" stroke-width="1"></circle>
+<line class="text-outline-variant/30" stroke="currentColor" stroke-width="0.8" x1="180" x2="620" y1="200" y2="200"></line>
+<line class="text-outline-variant/30" stroke="currentColor" stroke-width="0.8" x1="400" x2="400" y1="20" y2="380"></line>
+<!-- Línea de Escaneo Radar Giratoria -->
+<line class="opacity-75 animate-spin origin-[400px_200px]" stroke="#00F3FF" stroke-width="2" style="animation-duration: 9s;" x1="400" x2="520" y1="200" y2="100"></line>
+<!-- Siluetas Abstractas / Continentes de Vectores -->
+<!-- América del Norte & Sur simplificada -->
+<path d="M220 100 Q260 110 240 160 T200 230 Q220 280 230 330" fill="none" opacity="0.4" stroke="#00dce6" stroke-width="1.2"></path>
+<!-- Europa y África -->
+<path d="M380 90 Q430 80 440 140 T410 240 Q430 310 400 340" fill="none" opacity="0.4" stroke="#00dce6" stroke-width="1.2"></path>
+<!-- Asia y Oceanía -->
+<path d="M480 80 Q580 90 620 160 T560 250 Q600 300 630 340" fill="none" opacity="0.4" stroke="#00dce6" stroke-width="1.2"></path>
+<!-- Arcos Balísticos / Vínculos Satelitales Cuánticos -->
+<path class="opacity-80" d="M240 150 Q360 40 430 110" fill="none" stroke="#00FFA3" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<path class="opacity-80" d="M430 110 Q500 60 590 140" fill="none" stroke="#00F3FF" stroke-dasharray="4 2" stroke-width="1.5"></path>
+<path class="opacity-90" d="M420 180 Q480 150 510 220" fill="none" stroke="#B026FF" stroke-width="2"></path>
+<!-- Nodos Interconectados -->
+<circle class="animate-ping" cx="240" cy="150" fill="#00FFA3" r="4" style="animation-duration: 3s;"></circle>
+<circle cx="240" cy="150" fill="#00FFA3" r="3"></circle>
+<circle cx="430" cy="110" fill="#00F3FF" r="4"></circle>
+<circle cx="590" cy="140" fill="#00F3FF" r="4"></circle>
+<!-- 3 Puntos Críticos Parpadeantes en Magenta (Mar Rojo, Taiwán, Báltico) -->
+<!-- Báltico -->
+<circle class="animate-pulse" cx="425" cy="98" fill="#B026FF" r="6"></circle>
+<circle class="animate-ping" cx="425" cy="98" r="12" stroke="#B026FF" stroke-width="1" style="animation-duration: 2s;"></circle>
+<!-- Mar Rojo -->
+<circle class="animate-pulse" cx="450" cy="190" fill="#B026FF" r="6"></circle>
+<circle class="animate-ping" cx="450" cy="190" r="14" stroke="#B026FF" stroke-width="1" style="animation-duration: 1.8s;"></circle>
+<!-- Estrecho de Taiwán -->
+<circle class="animate-pulse" cx="585" cy="180" fill="#B026FF" r="6"></circle>
+<circle class="animate-ping" cx="585" cy="180" r="14" stroke="#B026FF" stroke-width="1" style="animation-duration: 2.2s;"></circle>
+</svg>
+</div>
+<!-- Encabezado del visor satelital -->
+<div class="relative z-10 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface-container-high/90 px-space-xs py-1 rounded flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary-container">satellite_alt</span>
+<span class="font-headline-md text-headline-md text-primary font-bold tracking-wide">ARGOS ATLAS &amp; OSIRIS</span>
+<span class="font-label-sm text-label-sm text-primary-fixed bg-surface-container px-1 rounded">GEOESPACIAL 3D</span>
+</div>
+<div class="hidden sm:flex items-center gap-1 bg-surface-container-lowest/80 px-2 py-0.5 rounded text-label-sm font-label-sm">
+<span class="text-outline">SAT:</span>
+<span class="text-primary font-semibold">KH-11 KENNAN #4</span>
+</div>
+</div>
+<!-- Controles de Modo -->
+<div class="flex items-center gap-1 bg-surface-container-high/90 p-0.5 rounded">
+<button class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-2 py-0.5 rounded font-bold uppercase shadow-sm">3D PROY</button>
+<button class="text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded uppercase">2D ORTO</button>
+<button class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm px-2 py-0.5 rounded uppercase flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">thermostat</span> IR
+            </button>
+</div>
+</div>
+<!-- Métricas Flotantes y Capas Activas -->
+
+<!-- Barra Inferior del Visor: Focos de Alerta y Telemetría Coordenadas -->
+<div class="relative z-10 flex flex-wrap items-center justify-between gap-space-xs pt-1 border-t border-outline-variant/20 bg-surface-container-lowest/80 px-space-xs rounded"><!-- Motor 1 --><div class="flex items-center gap-1 bg-surface-container px-space-xs py-1 rounded shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_6px_#00F3FF] animate-pulse"></span><span class="text-on-surface font-semibold">Nemotron 3:</span><span class="text-primary font-bold">ACTIVO</span><span class="text-outline text-[8px]">[118 t/s]</span></div><!-- Motor 2 --><div class="flex items-center gap-1 bg-surface-container px-space-xs py-1 rounded shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim animate-pulse"></span><span class="text-on-surface font-semibold">NVIDIA:</span><span class="text-primary-fixed-dim font-bold">EN LÍNEA</span><span class="text-outline text-[8px]">[TRT-LLM]</span></div><!-- WhatsApp Neón Verde Pulsante --><div class="flex items-center gap-1.5 bg-surface-container-high px-space-xs py-1 rounded border border-outline-variant/30 shadow-[0_0_8px_rgba(0,255,163,0.3)]"><span class="w-2 h-2 rounded-full bg-[#00FFA3] animate-ping"></span><span class="material-symbols-outlined text-[13px] text-[#00FFA3]">chat</span><span class="text-outline">WhatsApp:</span><span class="text-[#00FFA3] font-bold tracking-wide">CONECTADO</span><span class="text-outline text-[8px]">[24ms]</span></div><!-- Signal Cian Neón Escudo Q-Resist --><div class="flex items-center gap-1.5 bg-surface-container-high px-space-xs py-1 rounded border border-primary-container/40 shadow-[0_0_10px_#00F3FF]"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="material-symbols-outlined text-[13px] text-primary-container">shield</span><span class="text-outline">Signal:</span><span class="text-primary-container font-bold tracking-wide">CIFRADO Q-RESIST</span></div><!-- Trading App Azul Eléctrico --><div class="flex items-center gap-1.5 bg-surface-container-high px-space-xs py-1 rounded border border-secondary-container/40 shadow-[0_0_8px_#0266FF]"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="material-symbols-outlined text-[13px] text-secondary">query_stats</span><span class="text-outline">App Trading:</span><span class="text-secondary font-bold tracking-wide">SINCRONIZADA</span><span class="text-outline text-[8px]">[FIX 5.0 // 4ms]</span></div></div>
+</div>
+<!-- MITAD INFERIOR: PANEL MODULAR CON 4 PESTAÑAS -->
+<div class="flex flex-col bg-surface-container-low/80 backdrop-blur-xl p-space-sm rounded-lg shadow-xl flex-1">
+<!-- Navegación de Pestañas -->
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-xs mb-space-sm gap-space-xs overflow-x-auto scrollbar-none">
+<div class="flex items-center gap-space-xs">
+<button class="tab-btn px-space-sm py-1 rounded font-label-sm text-label-sm uppercase font-bold transition-all bg-primary-container text-on-primary-container shadow-sm flex items-center gap-1" id="btn-tab-osint" onclick="switchTab('tab-osint')">
+<span class="material-symbols-outlined text-[14px]">troubleshoot</span> [1. Arsenal OSINT]
+            </button>
+<button class="tab-btn px-space-sm py-1 rounded font-label-sm text-label-sm uppercase font-bold transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1" id="btn-tab-opsec" onclick="switchTab('tab-opsec')">
+<span class="material-symbols-outlined text-[14px]">verified_user</span> [2. Escudo OpSec]
+            </button>
+<button class="tab-btn px-space-sm py-1 rounded font-label-sm text-label-sm uppercase font-bold transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1" id="btn-tab-apps" onclick="switchTab('tab-apps')">
+<span class="material-symbols-outlined text-[14px]">deployed_code</span> [3. Mis Apps &amp; Fábrica]
+            </button>
+<button class="tab-btn px-space-sm py-1 rounded font-label-sm text-label-sm uppercase font-bold transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1" id="btn-tab-trading" onclick="switchTab('tab-trading')">
+<span class="material-symbols-outlined text-[14px]">query_stats</span> [4. Monitor Trading]
+            </button>
+</div>
+<button class="bg-surface-container-high hover:bg-primary text-primary hover:text-on-primary font-label-sm text-label-sm px-space-xs py-1 rounded font-bold uppercase transition-all flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-[13px]">add_circle</span> + Conectar Herramienta
+          </button>
+</div>
+<!-- CONTENIDO PESTAÑA 1: ARSENAL OSINT -->
+<div class="tab-content flex flex-col gap-space-sm" id="tab-osint">
+<!-- Barra de Búsqueda Rápida de Objetivos -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest p-space-xs rounded shadow-inner">
+<span class="material-symbols-outlined text-primary text-[18px] pl-1">fingerprint</span>
+<input class="bg-transparent w-full text-on-surface placeholder:text-outline font-label-sm text-label-sm focus:outline-none" placeholder="Buscar objetivo (Identidad, Email, Dominio, Hash, Persona o Empresa)..." type="text">
+<select class="bg-surface-container text-on-surface font-label-sm text-label-sm px-space-xs py-1 rounded border-none focus:outline-none">
+<option>Profundidad: Nivel 4 (Quantum Scrape)</option>
+<option>Profundidad: Nivel 2 (Superficial)</option>
+<option>Profundidad: Máxima (Zero-Trace)</option>
+</select>
+<button class="bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-sm text-label-sm font-bold uppercase px-space-sm py-1.5 rounded transition-all shadow-md shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> DISPARO OSINT
+            </button>
+</div>
+<!-- Matriz Cuadrícula de Herramientas OSINT -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-space-xs max-h-[220px] overflow-y-auto scrollbar-none pr-1">
+<!-- Horus -->
+<div class="bg-surface-container/70 hover:bg-surface-container-high p-space-xs rounded flex flex-col gap-0.5 cursor-pointer transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Horus</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<span class="text-[8px] font-label-sm text-outline">Sat Recon / Infrarrojo</span>
+<span class="text-[8px] font-label-sm text-primary-fixed-dim">PING: 18ms // ACTIVO</span>
+</div>
+<!-- Flowsint -->
+<div class="bg-surface-container/70 hover:bg-surface-container-high p-space-xs rounded flex flex-col gap-0.5 cursor-pointer transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Flowsint</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<span class="text-[8px] font-label-sm text-outline">Análisis Tráfico IP</span>
+<span class="text-[8px] font-label-sm text-primary-fixed-dim">PING: 24ms // ACTIVO</span>
+</div>
+<!-- Graphify -->
+<div class="bg-surface-container/70 hover:bg-surface-container-high p-space-xs rounded flex flex-col gap-0.5 cursor-pointer transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Graphify</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<span class="text-[8px] font-label-sm text-outline">Grafos de Relación</span>
+<span class="text-[8px] font-label-sm text-secondary">SINCRONIZADO</span>
+</div>
+<!-- SpiderFoot -->
+<div class="bg-surface-container/70 hover:bg-surface-container-high p-space-xs rounded flex flex-col gap-0.5 cursor-pointer transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">SpiderFoot</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<span class="text-[8px] font-label-sm text-outline">Recon Automatizado</span>
+<span class="text-[8px] font-label-sm text-primary-fixed-dim">3,400 Módulos ON</span>
+</div>
+<!-- FaceCheck.ID -->
+<div class="bg-surface-container/70 hover:bg-surface-container-high p-space-xs rounded flex flex-col gap-0.5 cursor-pointer transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">FaceCheck.ID</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<span class="text-[8px] font-label-sm text-outline">Visión Biométrica IA</span>
+<span class="text-[8px] font-label-sm text-primary-fixed-dim">99.8% Match Rate</span>
+</div>
+<!-- Shodan Images -->
+<div class="bg-surface-container/70 hover:bg-surface-container-high p-space-xs rounded flex flex-col gap-0.5 cursor-pointer transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Shodan Images</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<span class="text-[8px] font-label-sm text-outline">Cámaras Expuestas</span>
+<span class="text-[8px] font-label-sm text-primary-fixed-dim">Feed Activo</span>
+</div>
+<!-- Wordmonitor -->
+<div class="bg-surface-container/70 hover:bg-surface-container-high p-space-xs rounded flex flex-col gap-0.5 cursor-pointer transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Wordmonitor</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<span class="text-[8px] font-label-sm text-outline">Keywords en Darknet</span>
+<span class="text-[8px] font-label-sm text-primary-fixed-dim">120 Alertas/min</span>
+</div>
+<!-- Alien_eyes -->
+<div class="bg-surface-container/70 hover:bg-surface-container-high p-space-xs rounded flex flex-col gap-0.5 cursor-pointer transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Alien_eyes</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<span class="text-[8px] font-label-sm text-outline">DNS Extendido</span>
+<span class="text-[8px] font-label-sm text-primary-fixed-dim">LAT: 9ms</span>
+</div>
+<!-- Ghost-Track -->
+<div class="bg-surface-container/70 hover:bg-surface-container-high p-space-xs rounded flex flex-col gap-0.5 cursor-pointer transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Ghost-Track</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<span class="text-[8px] font-label-sm text-outline">Rastreador Celular</span>
+<span class="text-[8px] font-label-sm text-primary-fixed-dim">Triangulación ON</span>
+</div>
+<!-- Deanonymizer -->
+<div class="bg-surface-container/70 hover:bg-surface-container-high p-space-xs rounded flex flex-col gap-0.5 cursor-pointer transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Deanonymizer</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<span class="text-[8px] font-label-sm text-outline">Desofuscación Web</span>
+<span class="text-[8px] font-label-sm text-primary-fixed-dim">LISTO</span>
+</div>
+<!-- Open Planter -->
+<div class="bg-surface-container/70 hover:bg-surface-container-high p-space-xs rounded flex flex-col gap-0.5 cursor-pointer transition-all shadow-sm col-span-2 sm:col-span-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Open Planter</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<span class="text-[8px] font-label-sm text-outline">Metadatos Exif/GPS</span>
+<span class="text-[8px] font-label-sm text-primary-fixed-dim">SINCRONIZADO</span>
+</div>
+</div>
+</div>
+<!-- CONTENIDO PESTAÑA 2: ESCUDO OPSEC (Oculto por defecto) -->
+<div class="tab-content hidden flex flex-col gap-space-sm" id="tab-opsec">
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-space-xs max-h-[250px] overflow-y-auto scrollbar-none pr-1">
+<div class="bg-surface-container p-space-xs rounded shadow-sm">
+<div class="font-label-sm font-bold text-primary">Pi-hole</div>
+<div class="text-[9px] text-primary-fixed font-semibold">99.8% Bloqueos</div>
+<div class="text-[8px] text-outline">DNS Local Shield</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded shadow-sm">
+<div class="font-label-sm font-bold text-primary">Vopono VPN</div>
+<div class="text-[9px] text-primary-fixed font-semibold">Multi-hop ACTIVO</div>
+<div class="text-[8px] text-outline">Wireguard Quantum</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded shadow-sm">
+<div class="font-label-sm font-bold text-primary">SimpleLogin</div>
+<div class="text-[9px] text-secondary font-semibold">48 Aliases Enrutados</div>
+<div class="text-[8px] text-outline">Cero PII expuesta</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded shadow-sm">
+<div class="font-label-sm font-bold text-primary">GrapheneOS</div>
+<div class="text-[9px] text-primary font-semibold">Modo Sandboxed</div>
+<div class="text-[8px] text-outline">Kernel Hardened</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded shadow-sm">
+<div class="font-label-sm font-bold text-primary">MVT-Project</div>
+<div class="text-[9px] text-primary-fixed font-semibold">0 Rastros Pegasus</div>
+<div class="text-[8px] text-outline">Verificado 10m atrás</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded shadow-sm">
+<div class="font-label-sm font-bold text-primary">AirGuard</div>
+<div class="text-[9px] text-primary-fixed font-semibold">BLE Seguro</div>
+<div class="text-[8px] text-outline">Sin balizas anómalas</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded shadow-sm">
+<div class="font-label-sm font-bold text-primary">PeakVault</div>
+<div class="text-[9px] text-primary-container font-semibold">Bóveda Sellada</div>
+<div class="text-[8px] text-outline">Cifrado Cuántico</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded shadow-sm">
+<div class="font-label-sm font-bold text-primary">Imagine-scrubber</div>
+<div class="text-[9px] text-secondary font-semibold">EXIF Purgado</div>
+<div class="text-[8px] text-outline">Cero fuga geoespacial</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded shadow-sm">
+<div class="font-label-sm font-bold text-primary">Fawkes Cloaking</div>
+<div class="text-[9px] text-primary-fixed font-semibold">Anti-Facial ON</div>
+<div class="text-[8px] text-outline">Perturbación pixel</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded shadow-sm">
+<div class="font-label-sm font-bold text-primary">Cover Your Tracks</div>
+<div class="text-[9px] text-primary font-semibold">EFF 100% Protegido</div>
+<div class="text-[8px] text-outline">Huella browser oculta</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded shadow-sm">
+<div class="font-label-sm font-bold text-primary">Mailacces Leak</div>
+<div class="text-[9px] text-primary-fixed font-semibold">Sin filtraciones</div>
+<div class="text-[8px] text-outline">Monitor 24/7</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded shadow-sm">
+<div class="font-label-sm font-bold text-primary">Anonymity Tor</div>
+<div class="text-[9px] text-primary-container font-semibold">Nivel Tor 100%</div>
+<div class="text-[8px] text-outline">3 Saltos Onion</div>
+</div>
+</div>
+</div>
+<!-- CONTENIDO PESTAÑA 3: MIS APPS Y FÁBRICA (Oculto por defecto) -->
+<div class="tab-content hidden flex flex-col gap-space-sm" id="tab-apps">
+<!-- Tarjeta Destacada Heroica -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm shadow-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-primary font-bold">APP DE TRADING PROPIETARIA (V4.2 CORE)</span>
+<span class="font-label-sm text-label-sm text-outline">Motor Cuántico en Alta Frecuencia • WebSocket FIX 5.0 • Latencia: 4ms</span>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-md text-label-md px-space-md py-2 rounded font-bold uppercase transition-all shadow-[0_0_15px_#00F3FF] shrink-0">
+              ABRIR TERMINAL DEDICADA
+            </button>
+</div>
+<!-- Apps en Compilación Continua -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs">
+<div class="bg-surface-container-high/80 p-space-xs rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-primary font-bold">1. Crawler OSINT Bot</span>
+<span class="text-primary-fixed text-[8px] font-bold">BUILD OK</span>
+</div>
+<span class="text-[8px] text-outline">Rust Microservice • Scraping 10k nodes/s</span>
+</div>
+<div class="bg-surface-container-high/80 p-space-xs rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-primary font-bold">2. Arbitraje Cripto Scanner</span>
+<span class="text-primary-container text-[8px] font-bold">COMPILANDO 94%</span>
+</div>
+<span class="text-[8px] text-outline">Solana + Ethereum DEX DEX spread</span>
+</div>
+<div class="bg-surface-container-high/80 p-space-xs rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-primary font-bold">3. Generador Reportes ECC</span>
+<span class="text-primary-fixed text-[8px] font-bold">LISTO EN PROD</span>
+</div>
+<span class="text-[8px] text-outline">Síntesis Ejecutiva PDF + Telegram Bot</span>
+</div>
+</div>
+</div>
+<!-- CONTENIDO PESTAÑA 4: MONITOR TRADING (Oculto por defecto) -->
+<div class="tab-content hidden flex flex-col gap-space-xs" id="tab-trading">
+<!-- Métricas Trading -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs">
+<div class="bg-surface-container p-space-xs rounded">
+<span class="text-[8px] font-label-sm text-outline">WIN-RATE MENSUAL:</span>
+<div class="text-primary-fixed font-headline-md text-headline-md font-bold">76.4%</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded">
+<span class="text-[8px] font-label-sm text-outline">PNL DIARIO NETO:</span>
+<div class="text-primary font-headline-md text-headline-md font-bold">+$14,280 USD</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded">
+<span class="text-[8px] font-label-sm text-outline">SEÑAL ALPHA HUNTER:</span>
+<div class="text-primary-container font-headline-md text-headline-md font-bold">LONG BTC</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded">
+<span class="text-[8px] font-label-sm text-outline">VWAP CUMULATIVE:</span>
+<div class="text-secondary font-headline-md text-headline-md font-bold">BULLISH 1.48</div>
+</div>
+</div>
+<!-- Feed de últimas órdenes ejecutadas -->
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col gap-1 text-[9px] font-label-sm">
+<div class="text-outline uppercase font-bold text-[8px]">Últimas Ejecuciones WebSocket L2:</div>
+<div class="flex justify-between text-on-surface"><span>[16:41:02] LONG BTC/USD • 2.5 BTC @ $94,810</span><span class="text-primary-fixed font-bold">+0.82% FILLED</span></div>
+<div class="flex justify-between text-on-surface"><span>[16:38:44] SHORT EUR/USD • 1,000,000 EUR @ 1.0545</span><span class="text-primary-fixed font-bold">+0.24% FILLED</span></div>
+<div class="flex justify-between text-on-surface"><span>[16:35:10] LONG NVDA • 500 ACCIONES @ $146.20</span><span class="text-primary-fixed font-bold">+1.40% FILLED</span></div>
+</div>
+</div>
+</div>
+</main>
+<!-- ========================================== -->
+<!-- COLUMNA C: CONSOLA DIRECTA JARVIS (28% / 3 cols) -->
+<!-- ========================================== -->
+<aside class="lg:col-span-3 flex flex-col gap-space-sm bg-surface-container-low/70 backdrop-blur-xl p-space-sm rounded-lg shadow-xl relative overflow-hidden">
+<!-- Resplandor superior derecho -->
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- MITAD SUPERIOR: ORBE HOLOGRÁFICO ANIMADO DE JARVIS -->
+<div class="relative bg-surface-container-lowest/90 rounded-lg p-space-sm flex flex-col items-center justify-center min-h-[220px] overflow-hidden shadow-inner">
+<!-- SVG Arc Reactor Concétrico y Ondas de Audio -->
+<div class="relative w-36 h-36 flex items-center justify-center">
+<!-- Anillo Exterior Giratorio -->
+<svg class="absolute inset-0 w-full h-full text-primary-container/40 animate-spin" style="animation-duration: 22s;" viewBox="0 0 100 100">
+<circle cx="50" cy="50" fill="none" r="46" stroke="currentColor" stroke-dasharray="10 4" stroke-width="1"></circle>
+<circle cx="50" cy="50" fill="none" opacity="0.6" r="41" stroke="#00dce6" stroke-dasharray="2 6" stroke-width="0.8"></circle>
+</svg>
+<!-- Anillo Secundario Contra-rotación -->
+<svg class="absolute inset-2 w-[120px] h-[120px] text-secondary/50 animate-spin" style="animation-duration: 14s; animation-direction: reverse;" viewBox="0 0 100 100">
+<polygon fill="none" opacity="0.4" points="50,4 90,27 90,73 50,96 10,73 10,27" stroke="currentColor" stroke-width="1.2"></polygon>
+<circle cx="50" cy="50" fill="none" r="32" stroke="#00F3FF" stroke-dasharray="8 8" stroke-width="1"></circle>
+</svg>
+<!-- Núcleo Arc Reactor Holográfico Central -->
+<div class="relative w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center shadow-[0_0_25px_#00F3FF]">
+<div class="w-10 h-10 rounded-full bg-primary/40 flex items-center justify-center shadow-[inset_0_0_10px_#00F3FF]">
+<span class="material-symbols-outlined text-[24px] text-primary animate-pulse">neurology</span>
+</div>
+</div>
+</div>
+<!-- Espectro de Ondas de Audio Simulado (Ecualizador) -->
+<div class="flex items-center gap-1 mt-space-xs h-6">
+<span class="w-1 bg-primary-container rounded-full h-3 animate-pulse"></span>
+<span class="w-1 bg-primary rounded-full h-5 animate-pulse" style="animation-delay: 0.1s;"></span>
+<span class="w-1 bg-primary-fixed-dim rounded-full h-2 animate-pulse" style="animation-delay: 0.2s;"></span>
+<span class="w-1 bg-primary-container rounded-full h-6 animate-pulse" style="animation-delay: 0.15s;"></span>
+<span class="w-1 bg-secondary rounded-full h-4 animate-pulse" style="animation-delay: 0.3s;"></span>
+<span class="w-1 bg-primary-container rounded-full h-5 animate-pulse" style="animation-delay: 0.25s;"></span>
+<span class="w-1 bg-primary-fixed rounded-full h-2 animate-pulse" style="animation-delay: 0.05s;"></span>
+</div>
+<!-- Estado de Escucha -->
+<div class="flex items-center gap-1.5 mt-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#00F3FF] animate-ping"></span>
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">JARVIS V9.8 // ESCUCHA ACTIVA</span>
+</div>
+</div>
+<!-- FLUJO DE CONVERSACIÓN EJECUTIVA INTER-DIRECTORES -->
+<div class="flex flex-col gap-space-xs flex-1 overflow-y-auto max-h-[380px] p-space-xs bg-surface-container-lowest/80 rounded scrollbar-none text-body-sm font-body-sm">
+<!-- Mensaje 1: Usuario -->
+<div class="flex flex-col bg-surface-container/60 p-space-xs rounded shadow-sm">
+<div class="flex items-center justify-between text-[9px] font-label-sm text-outline mb-0.5">
+<span class="text-primary font-bold">[09:41:12] COMANDANTE:</span>
+<span>SEC-LVL 9</span>
+</div>
+<p class="text-on-surface leading-tight">"JARVIS, activa protocolo de blindaje financiero y correlaciona el flujo marítimo con las órdenes cuantitativas del Especialista de Trading."</p>
+</div>
+<!-- Mensaje 2: JARVIS -->
+<div class="flex flex-col bg-surface-container-high/80 p-space-xs rounded shadow-sm">
+<div class="flex items-center justify-between text-[9px] font-label-sm text-primary mb-0.5">
+<span class="font-bold">[09:41:14] JARVIS CORE:</span>
+<span class="text-primary-fixed text-[8px]">SÍNTESIS IA</span>
+</div>
+<p class="text-primary-fixed-dim leading-tight">"Entendido, Señor. Delegando tarea simultáneamente al Especialista Cuantitativo y al Director de Inteligencia OSINT."</p>
+</div>
+<!-- Mensaje 3: Delegado Trading -->
+<div class="flex flex-col bg-surface-container/60 p-space-xs rounded shadow-sm">
+<div class="flex items-center justify-between text-[9px] font-label-sm text-secondary mb-0.5">
+<span class="font-bold">[09:41:16] CUANTITATIVO:</span>
+<span class="text-[8px] bg-secondary-container/20 text-secondary px-1 rounded">DELEGADO</span>
+</div>
+<p class="text-on-surface leading-tight">"Ajustando cobertura dinámica en derivados del Brent Crude (+2.4% exposición). Posiciones aseguradas."</p>
+</div>
+<!-- Mensaje 4: Delegado OSINT -->
+<div class="flex flex-col bg-surface-container/60 p-space-xs rounded shadow-sm">
+<div class="flex items-center justify-between text-[9px] font-label-sm text-primary mb-0.5">
+<span class="font-bold">[09:41:19] INTELIGENCIA OSINT:</span>
+<span class="text-[8px] bg-primary-container/20 text-primary px-1 rounded">DELEGADO</span>
+</div>
+<p class="text-on-surface leading-tight">"Monitoreo satelital en Ormuz sincronizado. Reporte de riesgo emitido: Código Verde."</p>
+</div>
+</div>
+<!-- BARRA INFERIOR DE COMANDOS Y MICRÓFONO OMNI-RECEPTOR -->
+<div class="flex flex-col gap-space-xs mt-auto pt-space-xs">
+<!-- Input de Texto y Controles Auxiliares -->
+<div class="flex items-center gap-1 bg-surface-container-lowest p-space-xs rounded">
+<input class="bg-transparent w-full text-on-surface placeholder:text-outline font-label-sm text-label-sm focus:outline-none" id="jarvis-input" placeholder="Instruir a JARVIS o delegar al Consejo ECC..." type="text">
+<button class="text-outline hover:text-primary transition-colors p-1" title="Adjuntar Telemetría">
+<span class="material-symbols-outlined text-[16px]">attach_file</span>
+</button>
+<button class="text-outline hover:text-primary transition-colors p-1" title="Captura de Pantalla HUD">
+<span class="material-symbols-outlined text-[16px]">screenshot</span>
+</button>
+</div>
+<!-- Gran Botón Circular de Micrófono Neón Cian -->
+<div class="flex items-center justify-between bg-surface-container p-space-xs rounded">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase">OMNI-RECEPTOR</span>
+<span class="text-[8px] font-label-sm text-outline">Banda 2.4 GHz Resonancia de Voz</span>
+</div>
+<button class="w-12 h-12 rounded-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container flex items-center justify-center shadow-[0_0_20px_#00F3FF] transition-all transform hover:scale-105 active:scale-95" id="btn-mic" onclick="toggleMic()">
+<span class="material-symbols-outlined text-[24px]" id="mic-icon">mic</span>
+</button>
+</div>
+</div>
+</aside>
+</div><!-- 3. BARRA DE NAVEGACIÓN INFERIOR EN 5 PESTAÑAS TÁCTICAS HUD // TRON STYLE --><nav class="sticky bottom-0 z-50 w-full px-gutter-lg py-space-xs bg-surface-container-lowest/95 backdrop-blur-2xl border-t border-primary-container/30 shadow-[0_-4px_25px_rgba(0,243,255,0.15)] flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs w-full justify-between overflow-x-auto scrollbar-none"><!-- Pestaña 1: NÚCLEO (Activa / Destacada) --><button class="flex-1 min-w-[160px] py-1.5 px-space-sm rounded bg-primary-container/20 border border-primary-container shadow-[0_0_15px_#00F3FF] flex items-center justify-between group transition-all transform hover:scale-[1.02]"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#00F3FF] animate-pulse"></span><span class="material-symbols-outlined text-primary-container text-[18px]">neurology</span><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-primary font-bold tracking-wider">1. NÚCLEO</span><span class="text-[8px] font-label-sm text-primary-fixed-dim uppercase">ORBE // CONSOLA IA</span></div></div><span class="font-label-sm text-[9px] px-1 py-0.5 rounded bg-primary-container text-on-primary-container font-bold">F1</span></button><!-- Pestaña 2: CONSEJO ECC --><button class="flex-1 min-w-[160px] py-1.5 px-space-sm rounded bg-surface-container-high/80 border border-outline-variant/30 hover:border-primary-container hover:bg-surface-container-high flex items-center justify-between group transition-all transform hover:scale-[1.02]"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim"></span><span class="material-symbols-outlined text-primary text-[18px]">groups</span><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface group-hover:text-primary font-bold tracking-wider">2. CONSEJO ECC</span><span class="text-[8px] font-label-sm text-outline uppercase">8/8 DIRECTORES</span></div></div><span class="font-label-sm text-[9px] px-1 py-0.5 rounded bg-surface-container text-outline group-hover:text-primary font-bold">F2</span></button><!-- Pestaña 3: OSINT LIVE --><button class="flex-1 min-w-[160px] py-1.5 px-space-sm rounded bg-surface-container-high/80 border border-outline-variant/30 hover:border-primary-container hover:bg-surface-container-high flex items-center justify-between group transition-all transform hover:scale-[1.02]"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span><span class="material-symbols-outlined text-secondary text-[18px]">radar</span><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface group-hover:text-secondary font-bold tracking-wider">3. OSINT LIVE</span><span class="text-[8px] font-label-sm text-outline uppercase">ARGOS 3D // 11 TOOLS</span></div></div><span class="font-label-sm text-[9px] px-1 py-0.5 rounded bg-surface-container text-outline group-hover:text-secondary font-bold">F3</span></button><!-- Pestaña 4: ESCUDO OPSEC --><button class="flex-1 min-w-[160px] py-1.5 px-space-sm rounded bg-surface-container-high/80 border border-outline-variant/30 hover:border-on-tertiary-container hover:bg-surface-container-high flex items-center justify-between group transition-all transform hover:scale-[1.02]"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span><span class="material-symbols-outlined text-on-tertiary-container text-[18px]">security</span><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface group-hover:text-on-tertiary-container font-bold tracking-wider">4. ESCUDO OPSEC</span><span class="text-[8px] font-label-sm text-outline uppercase">12 HERRAMIENTAS AIR-GAP</span></div></div><span class="font-label-sm text-[9px] px-1 py-0.5 rounded bg-surface-container text-outline group-hover:text-on-tertiary-container font-bold">F4</span></button><!-- Pestaña 5: MIS APPS --><button class="flex-1 min-w-[160px] py-1.5 px-space-sm rounded bg-surface-container-high/80 border border-outline-variant/30 hover:border-primary hover:bg-surface-container-high flex items-center justify-between group transition-all transform hover:scale-[1.02]"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span><span class="material-symbols-outlined text-primary text-[18px]">deployed_code</span><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface group-hover:text-primary font-bold tracking-wider">5. MIS APPS</span><span class="text-[8px] font-label-sm text-outline uppercase">TRADING &amp; FÁBRICA</span></div></div><span class="font-label-sm text-[9px] px-1 py-0.5 rounded bg-surface-container text-outline group-hover:text-primary font-bold">F5</span></button></div></nav>
+<!-- SCRIPT DE MICRO-INTERACCIONES EN CLIENTE -->
+<script>
+    // Conmutador de Pestañas en Mitad Inferior
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-primary-container', 'text-on-primary-container');
+        btn.classList.add('text-on-surface-variant');
+      });
+
+      const selectedTab = document.getElementById(tabId);
+      if (selectedTab) selectedTab.classList.remove('hidden');
+
+      const activeBtn = document.getElementById('btn-' + tabId);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-primary-container', 'text-on-primary-container');
+        activeBtn.classList.remove('text-on-surface-variant');
+      }
+    }
+
+    // Toggle Micrófono
+    let micActive = false;
+    function toggleMic() {
+      micActive = !micActive;
+      const btn = document.getElementById('btn-mic');
+      const icon = document.getElementById('mic-icon');
+      if (micActive) {
+        btn.classList.add('animate-pulse', 'bg-primary-container');
+        icon.innerText = 'graphic_eq';
+      } else {
+        btn.classList.remove('animate-pulse', 'bg-primary-container');
+        icon.innerText = 'mic';
+      }
+    }
+
+    // Reloj en tiempo real
+    function updateClocks() {
+      const now = new Date();
+      const pad = (n) => String(n).padStart(2, '0');
+      
+      // UTC
+      const uH = pad(now.getUTCHours());
+      const uM = pad(now.getUTCMinutes());
+      const uS = pad(now.getUTCSeconds());
+      const elUtc = document.getElementById('clock-utc');
+      if (elUtc) elUtc.innerText = `${uH}:${uM}:${uS}Z`;
+
+      // Madrid (UTC+1 o +2 según horario)
+      const madStr = now.toLocaleTimeString('es-ES', { timeZone: 'Europe/Madrid' });
+      const elMad = document.getElementById('clock-madrid');
+      if (elMad) elMad.innerText = `${madStr} CET`;
+
+      // Nueva York
+      const nyStr = now.toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour12: false });
+      const elNy = document.getElementById('clock-ny');
+      if (elNy) elNy.innerText = `${nyStr} EST`;
+
+      // Tokio
+      const tokStr = now.toLocaleTimeString('ja-JP', { timeZone: 'Asia/Tokyo', hour12: false });
+      const elTok = document.getElementById('clock-tokyo');
+      if (elTok) elTok.innerText = `${tokStr} JST`;
+    }
+    setInterval(updateClocks, 1000);
+    updateClocks();
+  </script>
+</div></main></div>
+
+</body></html>

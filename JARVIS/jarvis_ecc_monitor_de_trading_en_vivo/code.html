@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#7000a8","primary":"#e3fdff","on-error":"#690005","surface-container-low":"#181c23","on-secondary-container":"#f9f7ff","primary-fixed":"#6ff6ff","primary-fixed-dim":"#00dce6","surface-container-lowest":"#0a0e15","surface-container-highest":"#31353c","primary-container":"#00f3ff","surface-tint":"#00dce6","outline-variant":"#3a494b","on-primary":"#00373a","secondary":"#b3c5ff","surface-dim":"#0f141a","surface-variant":"#31353c","inverse-on-surface":"#2c3138","secondary-fixed":"#dae1ff","on-surface":"#dfe2ec","on-tertiary-fixed":"#30004b","surface-bright":"#353941","tertiary-fixed-dim":"#e5b5ff","on-secondary-fixed":"#001849","error":"#ffb4ab","error-container":"#93000a","on-surface-variant":"#b9cacb","tertiary":"#fff6fd","on-secondary":"#002b75","outline":"#849495","tertiary-fixed":"#f4d9ff","on-secondary-fixed-variant":"#003fa4","on-tertiary":"#4e0078","on-error-container":"#ffdad6","on-primary-container":"#006b71","inverse-surface":"#dfe2ec","secondary-container":"#0266ff","on-primary-fixed-variant":"#004f53","surface":"#0f141a","background":"#0f141a","on-primary-fixed":"#002022","on-background":"#dfe2ec","secondary-fixed-dim":"#b3c5ff","on-tertiary-container":"#9500df","surface-container-high":"#262a31","surface-container":"#1c2027","tertiary-container":"#f1d1ff","inverse-primary":"#00696f"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","margin-lg":"2.5rem","margin":"1.5rem","gutter":"1rem","gutter-lg":"1.5rem","space-sm":"0.5rem","space-md":"1rem","space-xs":"0.25rem","space-xl":"2.5rem"},fontFamily:{"headline-xl-mobile":["Space Grotesk"],"body-md":["Inter"],"label-lg":["JetBrains Mono"],"label-md":["JetBrains Mono"],"headline-md":["Space Grotesk"],"body-sm":["Inter"],"headline-lg":["Space Grotesk"],"body-lg":["Inter"],"headline-xl":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"label-sm":["JetBrains Mono"]},fontSize:{"headline-xl-mobile":["32px",{lineHeight:"40px",letterSpacing:"0.06em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}],"label-lg":["13px",{lineHeight:"18px",letterSpacing:"0.12em",fontWeight:"600"}],"label-md":["11px",{lineHeight:"16px",letterSpacing:"0.14em",fontWeight:"500"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"0.04em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"0.06em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-xl":["48px",{lineHeight:"56px",letterSpacing:"0.08em",fontWeight:"700"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"0.04em",fontWeight:"600"}],"label-sm":["9px",{lineHeight:"12px",letterSpacing:"0.18em",fontWeight:"500"}]}}}}</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="JARVIS ECC Nucleo Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC5O5yrTDA2RT4YPU9s-zKyMg8zCn-WMEYHerCjV2IYwT8RhOVEQqzEH4Jc0F5eOXUgNwXLgCF33eKVrF4B2sXtW2L8O1-KaOkBwzwqq0KuTVL_GessBdSD8g9VUedItpOgfa6JI_QyedYzUOsP3PYJSIuEcMjNktVD9CNjJ-HjA99CL5Xy43Y1HxLo-HkXB1OPsKcFmLY0Nhh_LqhjAO8SXMw_-PV497PrReB0rDlW"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-lg text-label-lg text-primary uppercase">JARVIS // ECC</span><span class="font-label-sm text-label-sm px-space-xs bg-surface-container text-primary-fixed">v9.4-QUANTUM</span></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">NÚCLEO DE MANDO GLOBAL // STARK TACTICAL</span></div></div><div class="hidden xl:flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">CORE:</span><span class="font-label-sm text-label-sm text-primary uppercase">SINCRO-CUÁNTICA 99.98%</span></div><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SAT-LINK:</span><span class="font-label-sm text-label-sm text-secondary uppercase">GEO-ORBITAL ENLACE L4 [ACTIVO]</span></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">LATENCIA:</span><span class="font-label-sm text-label-sm text-primary font-bold">0.42 MS</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex flex-col text-right"><span class="font-label-sm text-label-sm text-primary uppercase">COMANDANTE EJECUTIVO</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SEC-CLEARANCE LVL-9</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low/95 backdrop-blur-2xl z-40 flex flex-col justify-between p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-md"><div class="px-space-sm pt-space-xs"><div class="font-label-sm text-label-sm text-outline uppercase">MATRIZ DE OPERACIONES</div><div class="font-label-md text-label-md text-on-surface uppercase">SISTEMA PRINCIPAL</div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="centro-de-mando" href="#"><span class="material-symbols-outlined text-[18px]">deployed_code</span>CENTRO DE MANDO</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="red-de-satelites" href="#"><span class="material-symbols-outlined text-[18px]">satellite_alt</span>RED DE SATÉLITES</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="defensa-orbital" href="#"><span class="material-symbols-outlined text-[18px]">shield</span>DEFENSA ORBITAL</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="telemetria-global" href="#"><span class="material-symbols-outlined text-[18px]">hub</span>TELEMETRÍA GLOBAL</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded transition-colors uppercase" data-path="protocolos-tacticos" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span>PROTOCOLOS TÁCTICOS</a></nav></div><div class="flex flex-col gap-space-xs bg-surface-container-lowest/80 p-space-sm rounded"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline uppercase">NIVEL DE AMENAZA</span><span class="font-label-sm text-label-sm text-primary uppercase">DEFCON 3</span></div><div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden"><div class="bg-primary-container h-full w-2/5"></div></div><div class="font-label-sm text-label-sm text-on-surface-variant text-right">ENCRIPTACIÓN Q-SHA512</div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full p-space-md gap-space-md">
+<!-- HUD Top Ribbon Diagnostics -->
+<div class="flex items-center justify-between px-space-md py-space-xs bg-surface-container-low/80 backdrop-blur-md rounded shadow-sm">
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#00f3ff] animate-ping"></span>
+<span class="font-label-sm text-label-sm text-outline uppercase">MODO TÁCTICO:</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">ALTA FRECUENCIA CUÁNTICA [HFT-Q]</span>
+</div>
+<div class="hidden md:flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">FEED CME / NASDAQ:</span>
+<span class="font-label-sm text-label-sm text-primary uppercase">0.18 MS ULTRA-FIBER</span>
+</div>
+<div class="hidden lg:flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">VOLATILIDAD VIX-IMP:</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase">18.42 (-2.14%)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container-highest text-primary-fixed uppercase rounded">ORD/SEG: 14,892</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">GLOBAL POS: <span class="text-primary font-bold">+$1,482,920.40 USD</span></span>
+</div>
+</div>
+<!-- Main 3-Column Tactical Command Center Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start w-full">
+<!-- LEFT COLUMN: Consejo ECC / Especialista Cuantitativo (Cols 1-3) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md w-full">
+<!-- Unit Header -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl p-space-md rounded shadow-md relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary-container/10 via-transparent to-transparent pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">verified_user</span>
+<span class="font-label-md text-label-md text-primary uppercase font-bold tracking-wider">CONSEJO ECC // SUPERVISIÓN</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">SEC-04</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+          Quórum militar-financiero activo. Asignación algorítmica supervisada por sub-núcleos sintéticos.
+        </div>
+</div>
+<!-- Focused Profile: Especialista Cuantitativo -->
+<div class="bg-surface-container-low/95 backdrop-blur-xl p-space-md rounded shadow-xl relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-primary-container/5 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between pb-space-xs mb-space-md">
+<span class="font-label-sm text-label-sm text-primary-fixed bg-surface-container px-space-xs py-0.5 rounded uppercase font-bold">[FOCO OPERATIVO ACTIVO]</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold animate-pulse">EN LÍNEA</span>
+</div>
+<div class="flex gap-space-md items-center mb-space-md">
+<div class="relative w-16 h-16 rounded overflow-hidden bg-surface-container-highest shrink-0 shadow-[0_0_12px_rgba(0,243,255,0.2)]">
+<img class="w-full h-full object-cover" data-alt="Futuristic cyborg quantitative analyst in dark tactical command room, cybernetic visor displaying neon blue algorithmic market formulas, cinematic high contrast neon lighting dark aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxpienGmSpAD_b5rccwxb_zCycWcOQQeC8DuzwAuxIX2M1VHIvLxZ5GAbHf2h5SlWYpp_B3zcQZCzaNrPQuK9twA7DSIieDGtoLjKpYdF6beHz-sqghL5pMVvdiq5Tr33xGkf1avpTEnwN1mNF9LkY2lAcxiDnT6k1_yTo1AYZ5llqOuEUsTbLmC7ZEjs6biiM9iUsxrtJ6nIKcZrh7EZtEr4fGTtibLa6jxpsUJk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="font-headline-md text-headline-md text-primary leading-tight truncate">DR. V. KANE</div>
+<div class="font-label-sm text-label-sm text-secondary uppercase font-semibold">ESPECIALISTA CUANTITATIVO JEFE</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-0.5">SUB-NÚCLEO NEMOTRON-Q</div>
+</div>
+</div>
+<!-- Telemetry Diagnostics Matrix -->
+<div class="flex flex-col gap-space-xs bg-surface-container-lowest/70 p-space-sm rounded mb-space-md font-label-sm text-label-sm">
+<div class="flex justify-between items-center py-0.5">
+<span class="text-on-surface-variant uppercase">ENLACE NEURONAL:</span>
+<span class="text-primary font-bold">99.4% COHERENCIA</span>
+</div>
+<div class="flex justify-between items-center py-0.5">
+<span class="text-on-surface-variant uppercase">MODO PREDICTIVO:</span>
+<span class="text-secondary font-bold">STOCHASTIC-PDE v4</span>
+</div>
+<div class="flex justify-between items-center py-0.5">
+<span class="text-on-surface-variant uppercase">RATIO SHARPE L2:</span>
+<span class="text-primary font-bold">4.82 (OPTIMAL)</span>
+</div>
+<div class="flex justify-between items-center py-0.5">
+<span class="text-on-surface-variant uppercase">RISK BUDGET UTIL:</span>
+<span class="text-primary font-bold">34.1% / 100%</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container rounded mb-space-md">
+<div class="font-label-sm text-label-sm text-outline uppercase mb-1">MEMORANDO TÁCTICO RECIENTE:</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+            "Anomalía de spread en futuros micro detectada a las 14:02:11. Re-balanceo completado vía Alpha Hunter L2 sin deslizamiento de liquidez."
+          </p>
+</div>
+<!-- Mini Sparkline for Quant Alpha Efficiency -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>EFICIENCIA ALPHA (ÚLTIMAS 4H)</span>
+<span class="text-primary font-bold">+18.9%</span>
+</div>
+<div class="h-10 w-full bg-surface-container-lowest rounded p-1 flex items-end">
+<svg class="w-full h-full text-primary-container" preserveaspectratio="none" viewbox="0 0 100 25">
+<path d="M0 20 L15 17 L25 22 L40 12 L55 14 L70 8 L85 10 L100 2" fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+<path d="M0 20 L15 17 L25 22 L40 12 L55 14 L70 8 L85 10 L100 2 L100 25 L0 25 Z" fill="currentColor" fill-opacity="0.15"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Other Council Nodes -->
+<div class="bg-surface-container-low/80 p-space-md rounded shadow-sm flex flex-col gap-space-sm">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">OTROS NODOS CONSEJEROS</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container rounded hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface">OFICIAL ESTRATÉGICO CYBER</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary">SYNC 100%</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container rounded hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md text-on-surface">DIRECTOR LOGÍSTICO ORBITAL</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary">SYNC 98%</span>
+</div>
+</div>
+</div>
+<!-- CENTER COLUMN: Top Geo Tactical Financial Map + Bottom Active Tab 4 Monitor (Cols 4-9) -->
+<div class="xl:col-span-6 flex flex-col gap-space-md w-full">
+<!-- TOP HALF: Mapa Geoespacial Táctico Bursátil -->
+<div class="bg-surface-container-low/95 backdrop-blur-xl rounded shadow-xl overflow-hidden relative flex flex-col">
+<!-- Panel Header -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">public</span>
+<span class="font-label-md text-label-md text-primary uppercase font-bold tracking-wider">MATRIZ GEOESPACIAL // RUTAS FINANCIERAS GLOBALES</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">CONECTIVIDAD: 12 BOLSAS L1</span>
+</div>
+</div>
+<!-- Tactical Visual Map Area -->
+<div class="relative h-64 w-full bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Tactical dark neon 3D holographic digital world map displaying glowing cybernetic blue financial data routes, glowing nodes in New York, London, Tokyo, Singapore and Zurich, particle network lines, deep dark void background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpzEvW0GpZCH9bPoBHA5VXD3uTDVgwC-jBLnuBIwl28VusY3C8xJstt8iRYBZUToVzF7m2sHoUdYbw0nbCtVpZuKn909ttG8dvkeZc2nQzdNeBKqwUuP34E9h4-uYPJ_-IytvrubnkOFa33KMcW6zIcbhJnVCQ5tfR1eIYaXof5re_LMyW_uKJOFGHda65TGjc76qRvyHqasz-Lfv3RFg86o0MPE_1kmeoLQLp7uE"/>
+<!-- Tactical HUD Overlay Grid & Crosshairs -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<!-- Interactive Nodes Markers Overlaid -->
+<div class="absolute top-1/4 left-1/4 flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-primary-container shadow-[0_0_12px_#00f3ff] animate-ping absolute"></div>
+<div class="w-3 h-3 rounded-full bg-primary-container shadow-[0_0_8px_#00f3ff]"></div>
+<span class="font-label-sm text-label-sm text-primary uppercase mt-1 px-1 bg-surface-container-lowest/90 rounded">NYC // NYSE-NASDAQ [LAT 0.12ms]</span>
+</div>
+<div class="absolute top-1/3 left-1/2 flex flex-col items-center">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary-container shadow-[0_0_10px_#0266ff]"></div>
+<span class="font-label-sm text-label-sm text-secondary uppercase mt-1 px-1 bg-surface-container-lowest/90 rounded">LDN // LSE [LAT 0.28ms]</span>
+</div>
+<div class="absolute top-1/2 right-1/4 flex flex-col items-center">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_10px_#00f3ff]"></div>
+<span class="font-label-sm text-label-sm text-primary uppercase mt-1 px-1 bg-surface-container-lowest/90 rounded">TKY // JPX [LAT 0.41ms]</span>
+</div>
+<!-- Financial Flow Stream Telemetry Bar -->
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between p-space-xs bg-surface-container-lowest/90 backdrop-blur-md rounded font-label-sm text-label-sm">
+<div class="flex items-center gap-space-sm">
+<span class="text-outline uppercase">VOLUMEN ROUTE 24H:</span>
+<span class="text-primary font-bold">$18.94B USD</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-outline uppercase">DARK POOL SHARE:</span>
+<span class="text-secondary font-bold">42.8%</span>
+</div>
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span class="font-bold">AUTO-ROUTE ON</span>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM HALF: Navigation Tabs Bar with TAB 4 Highlighted -->
+<div class="flex flex-col gap-space-md">
+<!-- Tabs Selector Bar -->
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded overflow-x-auto">
+<button class="px-space-sm py-1.5 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors uppercase whitespace-nowrap">
+            1. VISTA GENERAL
+          </button>
+<button class="px-space-sm py-1.5 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors uppercase whitespace-nowrap">
+            2. NODOS DEFCON
+          </button>
+<button class="px-space-sm py-1.5 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors uppercase whitespace-nowrap">
+            3. RADAR ORBITAL
+          </button>
+<!-- TAB 4: ACTIVE & HIGHLIGHTED IN NEON CYAN -->
+<button class="px-space-sm py-1.5 rounded font-label-md text-label-md bg-primary-container text-on-primary-container font-bold uppercase whitespace-nowrap shadow-[0_0_15px_rgba(0,243,255,0.4)] flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary-container animate-ping"></span>
+            4. MONITOR TRADING
+          </button>
+<button class="px-space-sm py-1.5 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors uppercase whitespace-nowrap">
+            5. MATRIZ DE RIESGO
+          </button>
+</div>
+<!-- ACTIVE PANEL: [MONITOR TRADING EN VIVO] -->
+<div class="bg-surface-container-low/95 backdrop-blur-xl p-space-md rounded shadow-xl flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute top-0 right-0 w-48 h-48 bg-primary-container/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Section 1: Resumen Ejecutivo de Bots Activos -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">smart_toy</span>
+<span class="font-label-md text-label-md text-primary uppercase font-bold tracking-wider">RESUMEN EJECUTIVO // BOTS TÁCTICOS ACTIVOS</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">3 / 3 OPERATIVOS</span>
+</div>
+<!-- Bot 1: Alpha Hunter L2 -->
+<div class="p-space-sm bg-surface-container rounded hover:bg-surface-container-high transition-colors flex flex-col md:flex-row justify-between items-start md:items-center gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_6px_#00f3ff]"></span>
+<span class="font-label-md text-label-md text-primary font-bold">ALPHA HUNTER L2</span>
+<span class="font-label-sm text-label-sm px-1.5 bg-surface-container-highest text-primary-fixed uppercase rounded">HFT ARB</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Estrategia: Arbitraje Estadístico BTC/ETH Tri-DEX
+                </div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 w-full md:w-auto justify-between md:justify-end">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase">WINRATE:</span>
+<span class="font-label-md text-label-md text-primary font-bold">76.4%</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase">VELOCIDAD:</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">1,420 ÓRD/MIN</span>
+</div>
+<div class="px-space-xs py-1 rounded bg-surface-container-lowest font-label-sm text-label-sm text-primary uppercase font-bold">
+                  [ACTIVO]
+                </div>
+</div>
+</div>
+<!-- Bot 2: Vol-Surface Maker -->
+<div class="p-space-sm bg-surface-container rounded hover:bg-surface-container-high transition-colors flex flex-col md:flex-row justify-between items-start md:items-center gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-container shadow-[0_0_6px_#0266ff]"></span>
+<span class="font-label-md text-label-md text-secondary font-bold">VOL-SURFACE MAKER</span>
+<span class="font-label-sm text-label-sm px-1.5 bg-surface-container-highest text-secondary-fixed uppercase rounded">DERIVADOS</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Opciones SPX 0DTE &amp; Derivados Multi-strike
+                </div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 w-full md:w-auto justify-between md:justify-end">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase">DELTA STAT:</span>
+<span class="font-label-md text-label-md text-secondary font-bold">0.02 NEUTRAL</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase">GREEKS HEDGE:</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">GAMMA LOCK</span>
+</div>
+<div class="px-space-xs py-1 rounded bg-surface-container-lowest font-label-sm text-label-sm text-secondary uppercase font-bold">
+                  [ACTIVO]
+                </div>
+</div>
+</div>
+<!-- Bot 3: Trend Sentinel AI -->
+<div class="p-space-sm bg-surface-container rounded hover:bg-surface-container-high transition-colors flex flex-col md:flex-row justify-between items-start md:items-center gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_6px_#e3fdff]"></span>
+<span class="font-label-md text-label-md text-primary font-bold">TREND SENTINEL AI</span>
+<span class="font-label-sm text-label-sm px-1.5 bg-surface-container-highest text-primary-fixed uppercase rounded">NEMOTRON LLM</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Predicción de impulso con micro-inyecciones de liquidez
+                </div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 w-full md:w-auto justify-between md:justify-end">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase">SEÑAL CONF.:</span>
+<span class="font-label-md text-label-md text-primary font-bold">92.1% BULL</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase">TIMEFRAME:</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">15S SUB-BAR</span>
+</div>
+<div class="px-space-xs py-1 rounded bg-surface-container-lowest font-label-sm text-label-sm text-primary uppercase font-bold">
+                  [ACTIVO]
+                </div>
+</div>
+</div>
+</div>
+<!-- Section 2: Indicadores IA en Tiempo Real & Alertas Directas -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Indicators Sub-panel -->
+<div class="p-space-sm bg-surface-container-lowest/80 rounded flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">INDICADORES IA // EJECUCIÓN CUÁNTICA</span>
+<!-- Sentimiento de Mercado Gauge -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant">SENTIMIENTO DE MERCADO:</span>
+<span class="text-primary font-bold">82% GREED [CUÁNTICO]</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded overflow-hidden">
+<div class="bg-primary-container h-full w-[82%] shadow-[0_0_10px_#00f3ff]"></div>
+</div>
+</div>
+<!-- Sensor Liquidez Macro & OFI -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant">ORDER FLOW IMBALANCE (OFI):</span>
+<span class="text-secondary font-bold">+0.64 (BUY PRESSURE)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded overflow-hidden">
+<div class="bg-secondary-container h-full w-[64%] shadow-[0_0_8px_#0266ff]"></div>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">SENSOR LIQUIDEZ MACRO:</span>
+<span class="text-primary font-bold">VOLUMEN PROFUNDO TIER-1</span>
+</div>
+</div>
+<!-- Feed de Alertas en Vivo de App Propietaria -->
+<div class="p-space-sm bg-surface-container-lowest/80 rounded flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">ALERTAS EN VIVO // PROPRIETARY APP FEED</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<div class="flex flex-col gap-space-xs mt-1">
+<div class="p-1.5 bg-surface-container rounded flex items-start gap-space-xs font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary-container text-[14px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="text-primary font-bold uppercase">ORDEN DE COBERTURA EJECUTADA</span>
+<span class="text-on-surface-variant">CME Micro-Futures: 120 Contratos @ 5,420.25 (Fill 100%)</span>
+</div>
+</div>
+<div class="p-1.5 bg-surface-container rounded flex items-start gap-space-xs font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-[14px] mt-0.5">shield</span>
+<div class="flex flex-col">
+<span class="text-secondary font-bold uppercase">FUGA DE VOLATILIDAD CONTENIDA</span>
+<span class="text-on-surface-variant">Binance L2: Re-balanceo dinámico completado en 14ms</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Gráficos Sparkline HUD Neón (PnL Acumulado y Drawdown) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- PnL Sparkline Card -->
+<div class="p-space-sm bg-surface-container-lowest/90 rounded flex flex-col gap-1 shadow-sm">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-outline uppercase">PNL ACUMULADO (INTRA-DAY TÁCTICO)</span>
+<span class="text-primary font-bold">+$348,190 USD (+14.2%)</span>
+</div>
+<div class="h-16 w-full flex items-end">
+<svg class="w-full h-full text-primary-container" preserveaspectratio="none" viewbox="0 0 200 40">
+<path d="M0 35 Q30 30, 50 25 T100 18 T140 10 T180 5 L200 2" fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+<path d="M0 35 Q30 30, 50 25 T100 18 T140 10 T180 5 L200 2 L200 40 L0 40 Z" fill="currentColor" fill-opacity="0.12"></path>
+</svg>
+</div>
+</div>
+<!-- Drawdown Sparkline Card -->
+<div class="p-space-sm bg-surface-container-lowest/90 rounded flex flex-col gap-1 shadow-sm">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-outline uppercase">MÁXIMO DRAWDOWN DINÁMICO</span>
+<span class="text-secondary font-bold">0.84% (LIM: 2.50%)</span>
+</div>
+<div class="h-16 w-full flex items-end">
+<svg class="w-full h-full text-secondary-container" preserveaspectratio="none" viewbox="0 0 200 40">
+<path d="M0 8 Q40 12, 70 6 T120 18 T160 8 T200 10" fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+<path d="M0 8 Q40 12, 70 6 T120 18 T160 8 T200 10 L200 40 L0 40 Z" fill="currentColor" fill-opacity="0.12"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Section 4: Controles de Contingencia Táctica -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<!-- Connect new bot button -->
+<button class="w-full sm:w-auto px-space-md py-2 bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md uppercase font-bold rounded transition-colors flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+              + CONECTAR NUEVO BOT / BROKER
+            </button>
+<!-- Tactical Modes Buttons -->
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="w-full sm:w-auto px-space-md py-2 bg-secondary-container/20 hover:bg-secondary-container/40 text-secondary font-label-md text-label-md uppercase font-bold rounded transition-colors flex items-center justify-center gap-space-xs shadow-[0_0_10px_rgba(2,102,255,0.2)]">
+<span class="material-symbols-outlined text-[16px]">security</span>
+                MODO HEDGE AUTOMÁTICO
+              </button>
+<!-- Emergency Kill Switch (Magenta Dual Bloom Alert) -->
+<button class="w-full sm:w-auto px-space-md py-2 bg-on-tertiary-container/30 hover:bg-on-tertiary-container text-tertiary font-label-md text-label-md uppercase font-bold rounded transition-colors flex items-center justify-center gap-space-xs shadow-[0_0_20px_rgba(176,38,255,0.5)]">
+<span class="material-symbols-outlined text-[16px]">dangerous</span>
+                KILL-SWITCH EMERGENCIA TRADING
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Consola JARVIS Reportando Ejecución Táctica (Cols 10-12) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md w-full">
+<!-- JARVIS Terminal Header -->
+<div class="bg-surface-container-low/95 backdrop-blur-xl p-space-md rounded shadow-xl relative overflow-hidden flex flex-col">
+<div class="flex items-center justify-between pb-space-xs mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">terminal</span>
+<span class="font-label-md text-label-md text-primary uppercase font-bold tracking-wider">JARVIS // CONSOLA TÁCTICA</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container-highest text-primary-fixed uppercase rounded">v9.4-LIVE</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-space-sm">
+          STREAM DE AUDITORÍA Y EJECUCIÓN DIRECTA DE ÓRDENES MICRO-SEGUNDO.
+        </div>
+<!-- CLI Activity Stream Box -->
+<div class="bg-surface-container-lowest p-space-sm rounded font-label-sm text-label-sm flex flex-col gap-space-xs h-[420px] overflow-y-auto">
+<div class="text-outline">[14:31:02.001] INIT ROUTINE 'ALPHA-HUNTER-L2'</div>
+<div class="text-primary font-bold">[14:31:02.045] MATCH: BINANCE/OKX ETH-SPREAD 0.42 USD</div>
+<div class="text-on-surface">[14:31:02.058] SUBMIT ROUTE: 45.00 ETH BUY @ L1-DIRECT</div>
+<div class="text-secondary font-bold">[14:31:02.072] HEDGE SENT: CME FUTURE DEC24 SHORT COVER</div>
+<div class="text-primary">[14:31:02.089] &gt;&gt; FILL CONFIRMED. SLIPPAGE: 0.0001%</div>
+<div class="text-outline mt-2">[14:31:04.110] QUANT ANALYST KANE REQUEST: DELTA PROBE</div>
+<div class="text-on-surface-variant">[14:31:04.120] NEMOTRON-Q SCANNING ORDERBOOK LEVEL 3...</div>
+<div class="text-primary font-bold">[14:31:04.195] LIQUIDITY WALL DETECTED AT $5,415.00 SPX</div>
+<div class="text-outline mt-2">[14:31:08.520] BOT 'VOL-SURFACE MAKER' SYNC</div>
+<div class="text-secondary">[14:31:08.544] REBALANCING OPTION BASKET: 250 CALLS SOLD</div>
+<div class="text-secondary">[14:31:08.580] GAMMA POSITION LOCKED. RISK METRIC: DELTA-ZERO</div>
+<div class="text-outline mt-2">[14:31:12.890] HIGH FREQUENCY BURST CME MICRO</div>
+<div class="text-primary font-bold">[14:31:12.912] 120 CONTRACTS FILL SECURED IN 0.18MS</div>
+<div class="text-primary">[14:31:12.940] PnL REALIZADO +$4,120.00 USD</div>
+<div class="text-outline mt-2">[14:31:15.002] SENTINEL AI: MOMENTUM INDEX +18.4</div>
+<div class="text-on-surface">[14:31:15.021] GREED INDEX SURGING TO 82% CUÁNTICO</div>
+<div class="flex items-center gap-1 text-primary mt-2">
+<span>JARVIS_EXEC:~$</span>
+<span class="w-2 h-4 bg-primary-container animate-pulse"></span>
+</div>
+</div>
+<!-- Terminal Status Bar -->
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant uppercase">STATUS: BUFFER OK</span>
+<span class="text-primary font-bold">LATENCIA CME: 0.18ms</span>
+</div>
+</div>
+<!-- Quick Command Input -->
+<div class="bg-surface-container-low/95 p-space-sm rounded shadow-sm flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">LÍNEA DE COMANDOS TÁCTICOS JARVIS</span>
+<div class="flex items-center bg-surface-container-lowest px-space-sm py-1.5 rounded">
+<span class="font-label-sm text-label-sm text-primary-container mr-2">&gt;</span>
+<input class="bg-transparent text-primary font-label-sm text-label-sm placeholder:text-outline focus:outline-none w-full" placeholder="INGRESAR PARÁMETRO QUANT (EJ: /HEDGE-MAX-DELTA)..." type="text"/>
+<button class="text-primary-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+</div>
+<!-- Security Hash Footer Block -->
+<div class="bg-surface-container-low/80 p-space-sm rounded flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline uppercase">HASH AUTORIZACIÓN:</span>
+<span class="text-secondary font-mono">0x9F4C...B28E</span>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
