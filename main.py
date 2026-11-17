@@ -60,7 +60,7 @@ async def startup_event():
 @app.get("/", response_class=HTMLResponse)
 async def root():
     """Sirve el HTML principal de Stitch (Cleopatra - Centro de Mando Global)"""
-    html_path = Path(__file__).parent / "JARVIS" / "JARVIS" / "jarvis_ecc_n_cleo_de_mando_global" / "code.html"
+    html_path = Path(__file__).parent / "JARVIS" / "jarvis_ecc_n_cleo_de_mando_global" / "code.html"
     if html_path.exists():
         content = html_path.read_text(encoding="utf-8")
         # Inyectar script de chat al final del body
