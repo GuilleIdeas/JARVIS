@@ -1,0 +1,82 @@
+/* ============================================
+   JARVIS ECC - ESTILOS DESKTOP (Parte 1)
+   Sistema de diseño Aegis Tactical HUD
+   ============================================ */
+
+@layer base {
+  html, body { margin: 0; padding: 0; height: 100%; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { display: none; }
+
+/* Animaciones */
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-record {
+  0%, 100% { box-shadow: 0 0 16px #ff4444; }
+  50% { box-shadow: 0 0 32px #ff4444, 0 0 48px #ff4444; }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 8px currentColor; }
+  50% { box-shadow: 0 0 20px currentColor, 0 0 32px currentColor; }
+}
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(50px, -30px); }
+  50% { transform: translate(-20px, 40px); }
+  75% { transform: translate(30px, 20px); }
+}
+
+.animate-slide-in { animation: slide-in 0.3s ease-out; }
+.animate-glow-pulse { animation: glow-pulse 2s ease-in-out infinite; }
+
+/* Fondo atmosférico */
+.atmospheric-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.atmospheric-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, var(--tw-gradient-from) 0%, transparent 70%);
+  --tw-gradient-from: #e3fdff;
+  --tw-gradient-to: transparent;
+  opacity: 0.05;
+}
+.atmospheric-bg .orb-1 {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 600px;
+  height: 600px;
+  background: #e3fdff;
+  border-radius: 50%;
+  filter: blur(128px);
+  opacity: 0.1;
+  animation: float 20s ease-in-out infinite;
+}
+.atmospheric-bg .orb-2 {
+  position: absolute;
+  bottom: 25%;
+  right: 25%;
+  width: 400px;
+  height: 400px;
+  background: #b3c5ff;
+  border-radius: 50%;
+  filter: blur(128px);
+  opacity: 0.1;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+/* Scrollbar personalizada para consolas */
+.console-scroll::-webkit-scrollbar { width: 4px; }
+.console-scroll::-webkit-scrollbar-track { background: #0a0e15; }
+.console-scroll::-webkit-scrollbar-thumb { background: #00dce6; border-radius: 2px; }
