@@ -50,11 +50,78 @@
       }
     }
   </script>
-  <title>JARVIS ECC - Centro de Mando Global</title>
+  <title>JARVIS - Centro de Mando Global</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-background text-on-surface font-sans antialiased">
-  <div id="app"></div>
+<body class="bg-background text-on-surface font-sans antialiased overflow-hidden h-screen w-screen">
+  <div class="atmospheric-bg">
+    <div class="orb-1"></div>
+    <div class="orb-2"></div>
+  </div>
+
+  <div id="app" class="relative z-10 h-full w-full flex overflow-hidden">
+    <!-- SIDEBAR: 12 DIVISIONES MAESTRAS -->
+    <aside id="master-sidebar" class="w-20 lg:w-64 bg-surface-container-lowest border-r border-outline-variant flex flex-col transition-all duration-300">
+      <div class="p-4 border-b border-outline-variant flex items-center justify-between">
+        <div class="hidden lg:flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary-container animate-pulse">hub</span>
+          <h1 class="font-display font-bold text-primary tracking-wider">JARVIS</h1>
+        </div>
+        <span class="material-symbols-outlined text-outline-variant cursor-pointer lg:hidden">menu</span>
+      </div>
+
+      <nav class="flex-1 overflow-y-auto p-2 space-y-1 custom-scrollbar">
+        <div id="divisions-menu" class="space-y-1">
+          <!-- Divisiones generadas por JS -->
+        </div>
+      </nav>
+
+      <div class="p-4 border-t border-outline-variant text-center">
+        <div class="hidden lg:block text-[10px] font-mono text-outline-variant uppercase mb-2">Status: Operational</div>
+        <div class="w-full h-1 bg-outline-variant rounded-full overflow-hidden">
+          <div class="h-full bg-primary-container w-3/4 animate-pulse"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-1 flex flex-col relative overflow-hidden">
+      <!-- TOP HEADER -->
+      <header class="h-16 border-b border-outline-variant bg-surface-container-low/50 backdrop-blur-md flex items-center justify-between px-6">
+        <div class="flex items-center gap-4">
+          <span id="active-division-icon" class="material-symbols-outlined text-primary-container">shield</span>
+          <h2 id="active-division-title" class="font-display font-semibold text-primary">Consola de Mando Global</h2>
+        </div>
+        <div class="flex items-center gap-6 font-mono text-xs">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            <span class="text-on-surface-variant">CORE ONLINE</span>
+          </div>
+          <div id="global-clock" class="text-primary">00:00:00 UTC</div>
+        </div>
+      </header>
+
+      <!-- DYNAMIC VIEWPORT -->
+      <section id="viewport" class="flex-1 overflow-hidden p-4 relative">
+        <div id="division-content" class="h-full w-full animate-slide-in">
+           <!-- Default: Division 1 Content -->
+        </div>
+      </section>
+
+      <!-- TACTICAL COMMAND BAR -->
+      <footer class="h-20 border-t border-outline-variant bg-surface-container-lowest p-4 flex items-center gap-4">
+        <div class="flex-1 relative">
+          <span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline-variant">terminal</span>
+          <input id="jarvis-command-input" type="text" placeholder="Ejecutar directiva táctica..." 
+                 class="w-full bg-surface-container pl-10 pr-4 py-2 rounded-lg border border-outline-variant focus:border-primary-container outline-none font-mono text-sm transition-all">
+        </div>
+        <button id="btn-send-tactical" class="bg-primary-container text-on-primary px-6 py-2 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-primary-fixed transition-colors">
+          Ejecutar
+        </button>
+      </footer>
+    </main>
+  </div>
+
   <script type="module" src="app.js"></script>
 </body>
 </html>
