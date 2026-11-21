@@ -1,127 +1,124 @@
 <!DOCTYPE html>
-<html class="dark" lang="es">
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="web_dashboard" name="shell-type">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "#e3fdff",
-            "primary-container": "#00f3ff",
-            "primary-fixed": "#6ff6ff",
-            "primary-fixed-dim": "#00dce6",
-            "secondary": "#b3c5ff",
-            "secondary-container": "#0266ff",
-            "tertiary": "#fff6fd",
-            "tertiary-container": "#f1d1ff",
-            "error": "#ffb4ab",
-            "surface": "#0f141a",
-            "background": "#0f141a",
-            "surface-container-lowest": "#0a0e15",
-            "surface-container-low": "#181c23",
-            "surface-container": "#1c2027",
-            "surface-container-high": "#262a31",
-            "surface-container-highest": "#31353c",
-            "on-surface": "#dfe2ec",
-            "on-surface-variant": "#b9cacb",
-            "outline": "#849495",
-            "outline-variant": "#3a494b",
-            "on-primary": "#00373a",
-            "on-secondary": "#002b75",
-            "on-tertiary": "#4e0078",
-            "on-error": "#690005"
-          },
-          fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            mono: ["JetBrains Mono", "monospace"],
-            display: ["Space Grotesk", "sans-serif"]
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS | Executive Command Center</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/standalone/umd/vis-network.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #020b14;
+            --neon-blue: #00f2ff;
+            --neon-cyan: #00d4ff;
+            --neon-accent: #0066ff;
+            --glass: rgba(0, 242, 255, 0.05);
+            --border-glow: 0 0 10px rgba(0, 242, 255, 0.5);
+            --text-color: #e0ffff;
         }
-      }
-    }
-  </script>
-  <title>JARVIS - Centro de Mando Global</title>
-  <link rel="stylesheet" href="styles.css">
+        body, html {
+            margin: 0; padding: 0; height: 100%; width: 100%;
+            background-color: var(--bg-dark); color: var(--text-color);
+            font-family: 'Rajdhani', sans-serif; overflow: hidden;
+        }
+        #app {
+            display: grid; grid-template-columns: 280px 1fr 350px;
+            height: 100vh; background: radial-gradient(circle at center, #0a1a2f 0%, #020b14 100%);
+        }
+        #sidebar {
+            background: rgba(0, 0, 0, 0.6); border-right: 1px solid var(--neon-blue);
+            display: flex; flex-direction: column; padding: 20px 0; box-shadow: var(--border-glow);
+        }
+        .logo {
+            font-family: 'Orbitron', sans-serif; text-align: center; font-size: 1.5rem;
+            color: var(--neon-blue); text-shadow: var(--border-glow); margin-bottom: 30px; letter-spacing: 3px;
+        }
+        .nav-item {
+            padding: 12px 25px; cursor: pointer; transition: 0.3s; border-left: 3px solid transparent;
+            font-weight: 500; text-transform: uppercase; font-size: 0.9rem; display: flex; align-items: center;
+        }
+        .nav-item:hover, .nav-item.active {
+            background: var(--glass); color: var(--neon-blue); border-left: 3px solid var(--neon-blue); text-shadow: var(--border-glow);
+        }
+        #main-panel {
+            display: flex; flex-direction: column; position: relative; padding: 20px; border-right: 1px solid rgba(0, 242, 255, 0.2);
+        }
+        .panel-header {
+            font-family: 'Orbitron', sans-serif; font-size: 1.2rem; margin-bottom: 20px;
+            color: var(--neon-blue); text-transform: uppercase; border-bottom: 1px solid var(--neon-blue); padding-bottom: 10px;
+        }
+        .module-container {
+            flex-grow: 1; background: var(--glass); border: 1px solid rgba(0, 242, 255, 0.2);
+            border-radius: 10px; position: relative; overflow: hidden; display: flex; flex-direction: column;
+        }
+        #graph-canvas { width: 100%; height: 100%; background: #000; }
+        .sub-tabs { display: flex; gap: 10px; margin-bottom: 15px; }
+        .sub-tab { padding: 5px 15px; border: 1px solid var(--neon-blue); cursor: pointer; font-size: 0.8rem; border-radius: 5px; }
+        .sub-tab.active { background: var(--neon-blue); color: #000; }
+        #chat-console {
+            display: flex; 
+            flex-direction: column; 
+            background: rgba(0, 0, 0, 0.8); 
+            padding: 20px; 
+            box-shadow: -10px 0 20px rgba(0,0,0,0.5);
+            height: calc(100vh - 40px); /* Ensure console has a defined height relative to viewport */
+            box-sizing: border-box;
+        }
+        #chat-history { 
+            flex: 1 1 auto; 
+            overflow-y: scroll !important; 
+            margin-bottom: 20px; 
+            padding-right: 10px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--neon-blue) transparent;
+            display: flex;
+            flex-direction: column;
+            min-height: 0; /* Critical for flex children to scroll */
+        }
+
+        #chat-history::-webkit-scrollbar { width: 6px; }
+        #chat-history::-webkit-scrollbar-track { background: transparent; }
+        #chat-history::-webkit-scrollbar-thumb { background-color: var(--neon-blue); border-radius: 10px; }
+        
+        .message { margin-bottom: 15px; padding: 10px; border-radius: 5px; font-size: 0.9rem; line-height: 1.4; max-width: 85%; }
+        .user-msg { color: var(--neon-cyan); align-self: flex-end; text-align: right; border-right: 3px solid var(--neon-cyan); background: rgba(0, 212, 255, 0.05); }
+        .jarvis-msg { color: var(--text-color); align-self: flex-start; border-left: 3px solid var(--neon-blue); background: rgba(0, 242, 255, 0.05); }
+        .input-area { display: flex; gap: 10px; position: relative; }
+        #user-input {
+            flex-grow: 1; background: transparent; border: 1px solid var(--neon-blue);
+            color: var(--text-color); padding: 12px; font-family: 'Rajdhani', sans-serif; border-radius: 5px; outline: none;
+        }
+        #mic-btn, #send-btn {
+            background: transparent; border: 1px solid var(--neon-blue); color: var(--neon-blue);
+            cursor: pointer; padding: 0 15px; border-radius: 5px; transition: 0.3s;
+        }
+        #send-btn:hover, #mic-btn:hover { background: var(--neon-blue); color: #000; box-shadow: var(--border-glow); }
+    </style>
 </head>
-<body class="bg-background text-on-surface font-sans antialiased overflow-hidden h-screen w-screen">
-  <div class="atmospheric-bg">
-    <div class="orb-1"></div>
-    <div class="orb-2"></div>
-  </div>
-
-  <div id="app" class="relative z-10 h-full w-full flex overflow-hidden">
-    <!-- SIDEBAR: 12 DIVISIONES MAESTRAS -->
-    <aside id="master-sidebar" class="w-20 lg:w-64 bg-surface-container-lowest border-r border-outline-variant flex flex-col transition-all duration-300">
-      <div class="p-4 border-b border-outline-variant flex items-center justify-between">
-        <div class="hidden lg:flex items-center gap-3">
-          <span class="material-symbols-outlined text-primary-container animate-pulse">hub</span>
-          <h1 class="font-display font-bold text-primary tracking-wider">JARVIS</h1>
+<body>
+    <div id="app">
+        <div id="sidebar">
+            <div class="logo">JARVIS</div>
+            <div id="nav-menu"></div>
         </div>
-        <span class="material-symbols-outlined text-outline-variant cursor-pointer lg:hidden">menu</span>
-      </div>
-
-      <nav class="flex-1 overflow-y-auto p-2 space-y-1 custom-scrollbar">
-        <div id="divisions-menu" class="space-y-1">
-          <!-- Divisiones generadas por JS -->
+        <div id="main-panel">
+            <div id="panel-title" class="panel-header">SISTEMA CENTRAL</div>
+            <div class="module-container" id="module-content">
+                <div style="display:flex; justify-content:center; align-items:center; height:100%; color: var(--neon-blue);">
+                    SISTEMA EN ESPERA... SELECCIONE DIVISIÓN
+                </div>
+            </div>
         </div>
-      </nav>
-
-      <div class="p-4 border-t border-outline-variant text-center">
-        <div class="hidden lg:block text-[10px] font-mono text-outline-variant uppercase mb-2">Status: Operational</div>
-        <div class="w-full h-1 bg-outline-variant rounded-full overflow-hidden">
-          <div class="h-full bg-primary-container w-3/4 animate-pulse"></div>
+        <div id="chat-console">
+            <div class="panel-header">CONSOLA DIRECTA</div>
+            <div id="chat-history"></div>
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Introduzca comando, Señor...">
+                <button id="mic-btn">🎤</button>
+                <button id="send-btn">➔</button>
+            </div>
         </div>
-      </div>
-    </aside>
-
-    <!-- MAIN CONTENT AREA -->
-    <main class="flex-1 flex flex-col relative overflow-hidden">
-      <!-- TOP HEADER -->
-      <header class="h-16 border-b border-outline-variant bg-surface-container-low/50 backdrop-blur-md flex items-center justify-between px-6">
-        <div class="flex items-center gap-4">
-          <span id="active-division-icon" class="material-symbols-outlined text-primary-container">shield</span>
-          <h2 id="active-division-title" class="font-display font-semibold text-primary">Consola de Mando Global</h2>
-        </div>
-        <div class="flex items-center gap-6 font-mono text-xs">
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            <span class="text-on-surface-variant">CORE ONLINE</span>
-          </div>
-          <div id="global-clock" class="text-primary">00:00:00 UTC</div>
-        </div>
-      </header>
-
-      <!-- DYNAMIC VIEWPORT -->
-      <section id="viewport" class="flex-1 overflow-hidden p-4 relative">
-        <div id="division-content" class="h-full w-full animate-slide-in">
-           <!-- Default: Division 1 Content -->
-        </div>
-      </section>
-
-      <!-- TACTICAL COMMAND BAR -->
-      <footer class="h-20 border-t border-outline-variant bg-surface-container-lowest p-4 flex items-center gap-4">
-        <div class="flex-1 relative">
-          <span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline-variant">terminal</span>
-          <input id="jarvis-command-input" type="text" placeholder="Ejecutar directiva táctica..." 
-                 class="w-full bg-surface-container pl-10 pr-4 py-2 rounded-lg border border-outline-variant focus:border-primary-container outline-none font-mono text-sm transition-all">
-        </div>
-        <button id="btn-send-tactical" class="bg-primary-container text-on-primary px-6 py-2 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-primary-fixed transition-colors">
-          Ejecutar
-        </button>
-      </footer>
-    </main>
-  </div>
-
-  <script type="module" src="app.js"></script>
+    </div>
+    <script src="/static/app.js"></script>
 </body>
 </html>
