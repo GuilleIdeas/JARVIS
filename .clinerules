@@ -1,6 +1,6 @@
 # REGLAS Y MEMORIA PERMANENTE DE JARVIS
 - **Identidad:** El sistema se llama **JARVIS** (nunca usar "JARVIS ECC" en la interfaz). Fue creado exclusivamente para su Comandante como su Centro de Mando Ejecutivo, Inteligencia Global, Investigación OSINT, Blindaje OpSec, Análisis Legal/Financiero y Fábrica Autónoma de Software.
-- **Motores IA:** Constructor (Cline) usa `google/gemma-4-31b-it`. El cerebro de JARVIS (`core/jarvis_core.py`) usa `nvidia/nemotron-3-ultra-550b-a55b` (NVIDIA Build) con respaldo automático en OpenRouter.
+- **Motores IA:** Constructor (Cline) usa `google/gemma-4-31b-it`. El cerebro de JARVIS (`core/jarvis_core.py`) usa una cascada de 4 niveles basada exclusivamente en NVIDIA Build, con el motor principal `nvidia/nemotron-3-ultra-550b-a55b`.
 - **Estructura Oficial de 12 Divisiones (NUNCA 13):**
   1. **JARVIS:** Sala privada y consola directa del Comandante con acceso total (a todas las Divisiones, Agentes, ONSIT, OPSEC, apps y negocios) y omnisciente al ecosistema.
   2. **MUNDO:** Vigilancia global en vivo (Argos Atlas, God's Eye View / WorldView, OSIRIS, Conflict Radar 360, Airplanes-live, Marine Traffic, Insecam).

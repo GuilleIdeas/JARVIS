@@ -61,7 +61,7 @@
             background: rgba(0, 0, 0, 0.8); 
             padding: 20px; 
             box-shadow: -10px 0 20px rgba(0,0,0,0.5);
-            height: calc(100vh - 40px); /* Ensure console has a defined height relative to viewport */
+            height: calc(100vh - 40px); 
             box-sizing: border-box;
         }
         #chat-history { 
@@ -73,8 +73,90 @@
             scrollbar-color: var(--neon-blue) transparent;
             display: flex;
             flex-direction: column;
-            min-height: 0; /* Critical for flex children to scroll */
+            min-height: 0; 
         }
+        #chat-history::-webkit-scrollbar { width: 6px; }
+        #chat-history::-webkit-scrollbar-track { background: transparent; }
+        #chat-history::-webkit-scrollbar-thumb { background-color: var(--neon-blue); border-radius: 10px; }
+        
+        /* JARVIS AI VISUALIZATION */
+        .jarvis-ai-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            background: radial-gradient(circle at center, #0a1a2f 0%, transparent 70%);
+            position: relative;
+        }
+        .ai-core {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .core-ring {
+            position: absolute;
+            border: 2px solid var(--neon-blue);
+            border-radius: 50%;
+            box-shadow: var(--border-glow), inset 0 0 15px var(--neon-blue);
+            transition: all 0.5s ease;
+        }
+        .ring-1 {
+            width: 100%; height: 100%;
+            border-style: dashed;
+            animation: rotate-clockwise 10s linear infinite;
+            opacity: 0.6;
+        }
+        .ring-2 {
+            width: 80%; height: 80%;
+            border-width: 4px;
+            border-style: double;
+            animation: rotate-counter-clockwise 7s linear infinite;
+            opacity: 0.8;
+        }
+        .ring-3 {
+            width: 60%; height: 60%;
+            border-style: dotted;
+            animation: rotate-clockwise 5s linear infinite;
+            opacity: 1;
+        }
+        .core-center {
+            width: 40px;
+            height: 40px;
+            background: var(--neon-blue);
+            border-radius: 50%;
+            box-shadow: 0 0 30px var(--neon-blue), 0 0 60px var(--neon-blue);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes rotate-clockwise {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes rotate-counter-clockwise {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 20px var(--neon-blue); }
+            50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 50px var(--neon-blue); }
+        }
+        .ai-status-text {
+            position: absolute;
+            bottom: 40px;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-blue);
+            text-shadow: var(--border-glow);
+            letter-spacing: 2px;
+            animation: blink 1.5s step-end infinite;
+        }
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
 
         #chat-history::-webkit-scrollbar { width: 6px; }
         #chat-history::-webkit-scrollbar-track { background: transparent; }

@@ -32,7 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function loadModule(div) {
         moduleContent.innerHTML = '';
-        if (div === "FINANZAS") {
+        if (div === "JARVIS") {
+            moduleContent.innerHTML = `
+                <div class="jarvis-ai-container">
+                    <div class="ai-core">
+                        <div class="core-ring ring-1"></div>
+                        <div class="core-ring ring-2"></div>
+                        <div class="core-ring ring-3"></div>
+                        <div class="core-center"></div>
+                    </div>
+                    <div class="ai-status-text">NÚCLEO DE IA ACTIVO... ESCUCHANDO, SEÑOR</div>
+                </div>
+            `;
+        } else if (div === "FINANZAS") {
             moduleContent.innerHTML = `
                 <div class="sub-tabs">
                     <div class="sub-tab active" onclick="alert('Cargando Macroeconomía...')">FINANZAS</div>
